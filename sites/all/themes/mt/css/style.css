@@ -1,0 +1,221 @@
+.panels-flexible-1 {
+  clear: both;
+}
+
+.panels-flexible-region-1-center-inside > .pane-title {
+  display: none;
+}
+
+.pane-system-main-menu
+{
+  float: left;
+  overflow: hidden;
+  height: 50px;
+}
+
+.pane-system-main-menu ul
+{
+  clear: both;
+  overflow: hidden;
+}
+
+.pane-system-main-menu ul li
+{
+  float: left;
+  margin-left: 20px;
+  list-style: none;
+}
+
+.pane-system-main-menu ul li.last
+{
+  padding: 2px 10px;
+  background: #4CC5ED;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.pane-system-main-menu ul li.last a
+{
+  text-decoration: none;
+  color: #fff;
+}
+
+.pane-menu-menu-user-links
+{
+  float: right;
+}
+
+.pane-menu-menu-user-links li
+{
+  list-style-type: none;
+}
+
+.view, .privatemsg-message, form#privatemsg-new
+{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+}
+
+.privatemsg-message {
+  background: orange;
+  margin-left: 25%;
+}
+
+form#privatemsg-new
+{
+  background: #ccc;
+}
+
+.privatemsg-message.logged-in-user {
+  background: green;
+  margin: 0;
+}
+
+.privatemsg-message-actions {
+  display: none;
+}
+
+
+.view-greeting
+{
+  background-color: purple;
+  color: #fff;
+  background-image: url(../img/wink.png);
+  background-repeat: no-repeat;
+  background-size: 3%;
+  background-position: 0 4px;
+  padding-left: 45px;
+}
+
+
+
+
+
+
+
+.view-users {
+  overflow: hidden;
+}
+
+.view-users .views-row {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.view-users.view-display-id-panel_pane_1 {
+  background: #00b300;
+}
+
+.view-users.view-display-id-panel_pane_2 {
+  background: #ff5c33;
+}
+
+.view-users.view-display-id-panel_pane_3 {
+  background: yellow;
+}
+
+.view-users.view-display-id-panel_pane_4 {
+  background: #ffc266;
+}
+
+.view-user-basic-data {
+  background: #ccc;
+}
+
+.view-user-posts {
+  margin-left: 100px;
+}
+
+.view-user-posts .views-row {
+  background: #339966;
+  padding: 20px;
+  width: 70%;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+  margin-bottom: 15px;
+}
+
+.view-user-posts .views-field-field-pictures,
+.view-user-posts .views-field-name,
+.view-user-posts .views-field-ur-action
+{
+  position: absolute;
+  margin-left: -100px;
+}
+
+.view-user-posts .views-field-name
+{
+  margin-top: 60px;
+}
+
+.view-user-posts .views-field-ur-action .rs-link
+{
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  display: block;
+  margin-top: 90px;
+}
+
+.view-user-posts .views-field-ur-action .rs-link a
+{
+  text-indent: -9999px;
+  display: block;
+}
+
+.view-user-posts .views-field-ur-action .rs-start
+{
+  background-image: url(../img/add_blue.png);
+}
+
+.view-user-posts .views-field-ur-action .rs-came
+{
+  background-image: url(../img/back.png);
+}
+
+.view-user-posts .views-field-ur-action .rs-sent a
+{
+  background-image: url(../img/delete.png);
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+}
+
+.view-user-posts .views-field-ur-action .rs-partner a
+{
+  background-image: url(../img/delete.png);
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+}
+
+.view-user-posts .views-field-field-post-image {
+  text-align: center;
+}
+
+.view-user-posts .views-field-body {
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+  margin-bottom: 15px;
+}
+
+.view-user-posts .views-field-body p {
+  margin: 0.5em 0;
+}
+
+
