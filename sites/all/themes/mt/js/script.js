@@ -18,7 +18,9 @@
   Drupal.behaviors.my_custom_behavior = {
     attach: function (context, settings) {
 
-      // Place your code here.
+      $('.form-field-name-field-media a.browse').html('Add video');
+      $('.form-field-name-field-post-image a.browse').html('Add image');
+      $('.form-field-name-field-film a.browse').html('Add film');
 
     }
   };

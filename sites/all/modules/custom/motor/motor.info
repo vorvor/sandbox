@@ -6,4 +6,5 @@ version = 7.x-1.x
 interface translation project = FALSE
 
 ;files[] =
+files[] = views/handlers/motor_handler_userlike.inc
 ;dependencies[] = 

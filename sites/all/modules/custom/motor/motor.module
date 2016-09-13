@@ -15,3 +15,261 @@ function motor_ctools_plugin_directory($module, $plugin) {
     return "plugins/$plugin";
   }
 }
+
+/**
+ * Implements hook_views_api().
+ */
+function motor_views_api($module = NULL, $api = NULL) {
+  return array(
+    'api' => '3.0',
+  );
+}
+
+function motor_menu() {
+  $items['decide/ajax/%/%'] = array(
+    'title' => 'Flag confirm',
+    'page callback' => 'motor_decide_save',
+    'page arguments' => array(2, 3),
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Saves decide. Always nid1 is the winner, that's how argument arrive, the order you know.
+ */
+function motor_decide_save($nid1, $nid2) {
+  global $user;
+  $query = db_insert('decide')
+    ->fields(array(
+      'uid' => $user->uid,
+      'nid1' => $nid1,
+      'nid2' => $nid2,
+      ))
+    ->execute();
+
+/*  $images = motor_throw_decide_item($nid1);
+  if (!$images) {*/
+    $images = motor_throw_decide_item();
+  /*}*/
+  if (empty($images)) {
+    $images = NULL;
+  }
+  drupal_json_output($images);
+}
+
+/*
+ *
+ */
+
+function motor_throw_decide_item($nid = NULL) {
+  global $user;
+  $time_start = microtime(true);
+
+  $tid = arg(1);
+
+  $query = db_select('field_data_field_image', 'i');
+  $query->join('field_data_field_type', 't', 't.entity_id = i.entity_id');
+  $query
+    ->fields('i', array('entity_id', 'field_image_fid'))
+    ->condition('i.bundle', 'decide')
+    ->condition('t.field_type_tid', $tid)
+    ->orderRandom();
+  $results = $query
+    ->execute()
+    ->fetchAll();
+
+  if ($nid) {
+    $results_[] = (object)array('entity_id' => $nid);
+  }
+  else {
+    $results_ = $results;
+  }
+
+  $found = [];
+  foreach ($results as $result1) {
+    foreach ($results_ as $result2) {
+      if ($result2->entity_id != $result1->entity_id) {
+        $db_and1 = db_and();
+        $db_and1->condition('d.nid1', $result1->entity_id);
+        $db_and1->condition('d.nid2', $result2->entity_id);
+        $db_and2 = db_and();
+        $db_and2->condition('d.nid1', $result2->entity_id);
+        $db_and2->condition('d.nid2', $result1->entity_id);
+        $db_or = db_or();
+        $db_or->condition($db_and1);
+        $db_or->condition($db_and2);
+        $query = db_select('decide', 'd');
+        $query
+          ->fields('d', array('nid1', 'nid2'))
+          ->condition('d.uid', $user->uid)
+          ->condition($db_or);
+        $results_2 = $query
+          ->execute()
+          ->fetchAll();
+        if (count($results_2) == 0 && empty($found)) {
+          $found[] = $result1;
+          $found[] = $result2;
+        }
+      }
+    }
+  }
+  $images = [];
+  foreach ($found as $result) {
+    $file = file_load($result->field_image_fid);
+    $image = array(
+      'style_name' => 'big_box',
+      'path' => $file->uri,
+    );
+    $images[]= array(
+      'img' => theme('image_style', $image, array(
+        '#attributes' => array('data-nid' => $result->entity_id),
+      )),
+      'nid' => $result->entity_id,
+    );
+  }
+  $time_end = microtime(true);
+  $execution_time = ($time_end - $time_start)/60;
+  return $images;
+}
+
+function motor_decide_order($uid = NULL, $tid = NULL, $nidflag = FALSE) {
+  global $user;
+  if (!$uid) {
+    $uid = $user->uid;
+  }
+  $query = db_select('decide', 'd');
+  $query->join('field_data_field_image', 'i1', 'i1.entity_id = d.nid1');
+  $query->join('field_data_field_image', 'i2', 'i2.entity_id = d.nid2');
+  if ($tid) {
+    $query->join('field_data_field_type', 't1', 't1.entity_id = d.nid1');
+    $query->join('field_data_field_type', 't2', 't2.entity_id = d.nid2');
+    $query->condition('t1.field_type_tid', $tid);
+    $query->condition('t2.field_type_tid', $tid);
+  }
+  $query->condition('d.uid', $uid);
+
+  $query
+    ->fields('d', array('nid1', 'nid2'))
+    ->fields('i1', array('field_image_fid'))
+    ->fields('i2', array('field_image_fid'));
+  $results = $query
+    ->execute()
+    ->fetchAll();
+  $order = [];
+  $once = [];
+  foreach ($results as $result) {
+    $nids = [];
+    $file = [];
+    if (!in_array($result->nid1, $once)) {
+      $nids[] = $result->nid1;
+      $file[] = file_load($result->field_image_fid);
+    }
+    if (!in_array($result->nid2, $once)) {
+      $nids[] = $result->nid2;
+      $file[] = file_load($result->i2_field_image_fid);
+    }
+    if (!empty($nids)) {
+      $once = array_merge($nids, $once);
+      foreach ($nids as $key => $nid) {
+        $image = array(
+          'style_name' => 'mini-box',
+          'path' => $file[$key]->uri,
+        );
+        $order[] = array(
+          'nid' => $nid,
+          'img' => theme('image_style', $image, array(
+            '#attributes' => array(
+              'data-nid' => $nid,
+            ),
+          )),
+        );
+      }
+
+    }
+  }
+  $change = TRUE;
+  while ($change) {
+    $change = FALSE;
+    for ($c = 0; $c < count($order) - 1; $c++) {
+      if (!motor_check_order($order[$c]['nid'], $order[$c + 1]['nid'])) {
+        $a = $order[$c];
+        $order[$c] = $order[$c + 1];
+        $order[$c + 1] = $a;
+        $change = TRUE;
+      }
+    }
+  }
+
+  if ($nidflag) {
+    return $order;
+  }
+
+  foreach ($order as $item) {
+    $images[] = $item['img'] . '(' . $item['nid'] .')';
+  }
+  $images = implode(',', $images);
+
+  return $images;
+}
+
+function motor_check_order($nid1, $nid2) {
+  $query = db_select('decide', 'd');
+  $query
+    ->fields('d', array('nid1', 'nid2'))
+    ->condition('nid1', $nid1)
+    ->condition('nid2', $nid2);
+  $results = $query
+    ->execute()
+    ->fetchAll();
+  if (count($results) == 0) {
+    $query = db_select('decide', 'd');
+    $query
+      ->fields('d', array('nid1', 'nid2'))
+      ->condition('nid2', $nid1)
+      ->condition('nid1', $nid2);
+    $results = $query
+      ->execute()
+      ->fetchAll();
+    if (count($results) == 0) {
+      return TRUE;
+    }
+    else {
+      return FALSE;
+    }
+  }
+  else {
+    return TRUE;
+  }
+}
+
+function motor_compare_decides($uid1, $uid2, $tid) {
+  $images[] = motor_decide_order($uid1, $tid, TRUE);
+  $images[] = motor_decide_order($uid2, $tid, TRUE);
+  $diff = [];
+  $sum = 0;
+  foreach ($images as $image) {
+    for ($c = 0; $c < count($image); $c++) {
+      if (isset($diff[$image[$c]['nid']])) {
+        $diff[$image[$c]['nid']] -= $c;
+        $sum += abs($diff[$image[$c]['nid']]);
+        $s2[] = $image[$c]['nid'];
+      }
+      else {
+        $diff[$image[$c]['nid']] = $c;
+        $s1[] = $image[$c]['nid'];
+      }
+    }
+  }
+  $max = count($image) * count($image);
+  $percent = 100 - ($sum / $max) * 100;
+
+  $s1 = implode('', $s1);
+  $s2 = implode('', $s2);
+  $p = 0;
+  similar_text($s1, $s2, $p);
+
+  return $percent . ':' . $p;
+}
