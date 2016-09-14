@@ -27,23 +27,6 @@ function base_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_feed:feed.
-  $menu_links['main-menu_feed:feed'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'feed',
-    'router_path' => 'feed',
-    'link_title' => 'Feed',
-    'options' => array(
-      'identifier' => 'main-menu_feed:feed',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
-  );
   // Exported menu link: main-menu_home:<front>.
   $menu_links['main-menu_home:<front>'] = array(
     'menu_name' => 'main-menu',
@@ -105,7 +88,6 @@ function base_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Dashboard');
-  t('Feed');
   t('Home');
   t('Messages');
   t('Post');

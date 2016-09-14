@@ -22,9 +22,7 @@ function base_field_group_info() {
   $field_group->data = array(
     'label' => 'Film',
     'weight' => '6',
-    'children' => array(
-      0 => 'field_film',
-    ),
+    'children' => array(),
     'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -49,9 +47,7 @@ function base_field_group_info() {
   $field_group->data = array(
     'label' => 'Image',
     'weight' => '4',
-    'children' => array(
-      0 => 'field_post_image',
-    ),
+    'children' => array(),
     'format_type' => 'htab',
     'format_settings' => array(
       'label' => 'Image',
@@ -77,9 +73,7 @@ function base_field_group_info() {
   $field_group->data = array(
     'label' => 'Link',
     'weight' => '5',
-    'children' => array(
-      0 => 'field_link',
-    ),
+    'children' => array(),
     'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -103,7 +97,7 @@ function base_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'media',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'group_video',
       1 => 'group_image',
@@ -133,9 +127,7 @@ function base_field_group_info() {
   $field_group->data = array(
     'label' => 'Video',
     'weight' => '3',
-    'children' => array(
-      0 => 'field_media',
-    ),
+    'children' => array(),
     'format_type' => 'htab',
     'format_settings' => array(
       'label' => 'Video',

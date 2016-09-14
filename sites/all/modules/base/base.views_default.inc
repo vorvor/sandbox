@@ -238,17 +238,6 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
-  /* Field: User: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'users';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'user-page/[uid]';
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
   /* Field: User: Pictures */
   $handler->display->display_options['fields']['field_pictures']['id'] = 'field_pictures';
   $handler->display->display_options['fields']['field_pictures']['table'] = 'field_data_field_pictures';
@@ -265,6 +254,28 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_pictures']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_pictures']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_pictures']['separator'] = '';
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'user-page/[uid]';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+  /* Field: User: Looking for */
+  $handler->display->display_options['fields']['field_looking_for']['id'] = 'field_looking_for';
+  $handler->display->display_options['fields']['field_looking_for']['table'] = 'field_data_field_looking_for';
+  $handler->display->display_options['fields']['field_looking_for']['field'] = 'field_looking_for';
+  /* Field: Privatemsg: Send Privatemsg link */
+  $handler->display->display_options['fields']['privatemsg_link']['id'] = 'privatemsg_link';
+  $handler->display->display_options['fields']['privatemsg_link']['table'] = 'users';
+  $handler->display->display_options['fields']['privatemsg_link']['field'] = 'privatemsg_link';
+  $handler->display->display_options['fields']['privatemsg_link']['label'] = '';
+  $handler->display->display_options['fields']['privatemsg_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['privatemsg_link']['return'] = 1;
   /* Field: User relationships: User relationship add / remove action */
   $handler->display->display_options['fields']['ur_action']['id'] = 'ur_action';
   $handler->display->display_options['fields']['ur_action']['table'] = 'users';
@@ -285,13 +296,6 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['label'] = '';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'Edit profile';
-  /* Field: Privatemsg: Send Privatemsg link */
-  $handler->display->display_options['fields']['privatemsg_link']['id'] = 'privatemsg_link';
-  $handler->display->display_options['fields']['privatemsg_link']['table'] = 'users';
-  $handler->display->display_options['fields']['privatemsg_link']['field'] = 'privatemsg_link';
-  $handler->display->display_options['fields']['privatemsg_link']['label'] = '';
-  $handler->display->display_options['fields']['privatemsg_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['privatemsg_link']['return'] = 1;
   /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
@@ -360,8 +364,9 @@ function base_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('Edit profile'),
+    t('Looking for'),
     t('Send message'),
+    t('Edit profile'),
     t('All'),
     t('Content pane'),
     t('View panes'),
@@ -393,6 +398,19 @@ function base_views_default_views() {
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Relationship: Flags: like */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'like';
+  /* Relationship: Flags: User's flaggings */
+  $handler->display->display_options['relationships']['flag_user_content_rel']['id'] = 'flag_user_content_rel';
+  $handler->display->display_options['relationships']['flag_user_content_rel']['table'] = 'users';
+  $handler->display->display_options['relationships']['flag_user_content_rel']['field'] = 'flag_user_content_rel';
+  $handler->display->display_options['relationships']['flag_user_content_rel']['relationship'] = 'uid';
+  $handler->display->display_options['relationships']['flag_user_content_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_user_content_rel']['flag'] = 'like';
   /* Field: User: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
@@ -402,6 +420,16 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'user-page/[uid]';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
   /* Field: User: Pictures */
   $handler->display->display_options['fields']['field_pictures']['id'] = 'field_pictures';
   $handler->display->display_options['fields']['field_pictures']['table'] = 'field_data_field_pictures';
@@ -419,16 +447,6 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_pictures']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_pictures']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_pictures']['separator'] = '';
-  /* Field: User: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'users';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'user-page/[uid]';
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
   /* Field: User relationships: User relationship add / remove action */
   $handler->display->display_options['fields']['ur_action']['id'] = 'ur_action';
   $handler->display->display_options['fields']['ur_action']['table'] = 'users';
@@ -443,6 +461,13 @@ function base_views_default_views() {
     'requested' => 'requested',
     'received' => 'received',
   );
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -460,13 +485,9 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_post_image']['settings'] = array(
     'file_view_mode' => 'default',
   );
-  /* Field: Content: Link */
-  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
-  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
-  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
-  $handler->display->display_options['fields']['field_link']['label'] = '';
-  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_post_image']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_post_image']['multi_type'] = 'ul';
+  $handler->display->display_options['fields']['field_post_image']['separator'] = '';
   /* Field: Content: Media */
   $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
   $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
@@ -477,16 +498,37 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_media']['settings'] = array(
     'file_view_mode' => 'default',
   );
-  /* Field: Content: Film */
-  $handler->display->display_options['fields']['field_film']['id'] = 'field_film';
-  $handler->display->display_options['fields']['field_film']['table'] = 'field_data_field_film';
-  $handler->display->display_options['fields']['field_film']['field'] = 'field_film';
-  $handler->display->display_options['fields']['field_film']['label'] = '';
-  $handler->display->display_options['fields']['field_film']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_film']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_film']['settings'] = array(
-    'file_view_mode' => 'full',
+  /* Field: Content: Url */
+  $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
+  $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['label'] = '';
+  $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_url']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_url']['settings'] = array(
+    'trim_length' => '80',
+    'nofollow' => 0,
   );
+  /* Field: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = '';
+  $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Custom: User like */
+  $handler->display->display_options['fields']['userlike']['id'] = 'userlike';
+  $handler->display->display_options['fields']['userlike']['table'] = 'motor';
+  $handler->display->display_options['fields']['userlike']['field'] = 'userlike';
+  $handler->display->display_options['fields']['userlike']['label'] = '';
+  $handler->display->display_options['fields']['userlike']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -539,12 +581,6 @@ function base_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'post' => 'post',
   );
-  /* Filter criterion: User: Current */
-  $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
-  $handler->display->display_options['filters']['uid_current']['table'] = 'users';
-  $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
-  $handler->display->display_options['filters']['uid_current']['relationship'] = 'uid';
-  $handler->display->display_options['filters']['uid_current']['value'] = '0';
   $translatables['user_posts'] = array(
     t('Master'),
     t('more'),
@@ -561,6 +597,9 @@ function base_views_default_views() {
     t('next ›'),
     t('last »'),
     t('author'),
+    t('flag'),
+    t('user flagged content'),
+    t('edit'),
     t('All'),
     t('current user'),
     t('View panes'),

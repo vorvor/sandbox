@@ -99,6 +99,25 @@ function base_default_page_manager_pages() {
   $display->content['new-46e4ac2c-d227-4542-8efa-2e6952528432'] = $pane;
   $display->panels['center'][0] = 'new-46e4ac2c-d227-4542-8efa-2e6952528432';
   $pane = new stdClass();
+  $pane->pid = 'new-649ed98f-da5b-4f1f-b8a6-2997f02218b7';
+  $pane->panel = 'center';
+  $pane->type = 'messages';
+  $pane->subtype = 'messages';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '649ed98f-da5b-4f1f-b8a6-2997f02218b7';
+  $display->content['new-649ed98f-da5b-4f1f-b8a6-2997f02218b7'] = $pane;
+  $display->panels['center'][1] = 'new-649ed98f-da5b-4f1f-b8a6-2997f02218b7';
+  $pane = new stdClass();
   $pane->pid = 'new-250874f5-afb5-4392-bcc9-88c2d5f0bb92';
   $pane->panel = 'center';
   $pane->type = 'views_panes';
@@ -112,11 +131,11 @@ function base_default_page_manager_pages() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '250874f5-afb5-4392-bcc9-88c2d5f0bb92';
   $display->content['new-250874f5-afb5-4392-bcc9-88c2d5f0bb92'] = $pane;
-  $display->panels['center'][1] = 'new-250874f5-afb5-4392-bcc9-88c2d5f0bb92';
+  $display->panels['center'][2] = 'new-250874f5-afb5-4392-bcc9-88c2d5f0bb92';
   $pane = new stdClass();
   $pane->pid = 'new-689f5794-fbac-4b39-ba63-0df49fb1c807';
   $pane->panel = 'center';
@@ -131,11 +150,11 @@ function base_default_page_manager_pages() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = '689f5794-fbac-4b39-ba63-0df49fb1c807';
   $display->content['new-689f5794-fbac-4b39-ba63-0df49fb1c807'] = $pane;
-  $display->panels['center'][2] = 'new-689f5794-fbac-4b39-ba63-0df49fb1c807';
+  $display->panels['center'][3] = 'new-689f5794-fbac-4b39-ba63-0df49fb1c807';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -205,6 +224,29 @@ function base_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
+  $pane->pid = 'new-31a8e0f5-9421-44f6-9fc6-2c8218b5b6fc';
+  $pane->panel = 'center';
+  $pane->type = 'block';
+  $pane->subtype = 'formblock-post';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '31a8e0f5-9421-44f6-9fc6-2c8218b5b6fc';
+  $display->content['new-31a8e0f5-9421-44f6-9fc6-2c8218b5b6fc'] = $pane;
+  $display->panels['center'][0] = 'new-31a8e0f5-9421-44f6-9fc6-2c8218b5b6fc';
+  $pane = new stdClass();
   $pane->pid = 'new-3b8e40a6-7761-4772-8672-53c6692e9d5c';
   $pane->panel = 'center';
   $pane->type = 'views_panes';
@@ -218,11 +260,11 @@ function base_default_page_manager_pages() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '3b8e40a6-7761-4772-8672-53c6692e9d5c';
   $display->content['new-3b8e40a6-7761-4772-8672-53c6692e9d5c'] = $pane;
-  $display->panels['center'][0] = 'new-3b8e40a6-7761-4772-8672-53c6692e9d5c';
+  $display->panels['center'][1] = 'new-3b8e40a6-7761-4772-8672-53c6692e9d5c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-3b8e40a6-7761-4772-8672-53c6692e9d5c';
   $handler->conf['display'] = $display;
