@@ -20,6 +20,7 @@ function motor_page_alter() {
       'user-name' => $user->name,
       'time' => date('Y-m-d H:i:s'),
       'diff-min' => $diff / 60,
+      'path' => current_path(),
     );
     watchdog('user-track', print_r($data, 1));
   }
