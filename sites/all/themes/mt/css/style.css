@@ -16,6 +16,69 @@ body {
 }
 
 
+.page-login .inside
+{
+  padding: 10px;
+}
+
+.page-login .user-registration .description,
+.page-login .user-login .description
+{
+  display: none;
+}
+
+
+.page-login .user-registration,
+.page-login .user-login
+{
+  width: 45%;
+  float: left;
+}
+
+.page-login .user-registration
+{
+  background: #7E8F7C;
+  border: #aaa;
+  padding: 10px;
+}
+
+.page-login .user-registration .form-required
+{
+  color: #fff;
+}
+
+.page-login .user-registration fieldset
+{
+  padding: 0;
+  border: 0;
+}
+
+.page-login .user-registration fieldset legend
+{
+  display: none;
+}
+
+.page-login .user-login
+{
+  margin-left: 3%;
+}
+
+.page-login .user-registration .field-name-field-gender,
+.page-login .user-registration .field-name-field-looking-for
+{
+  width: 45%;
+  float: left;
+}
+
+.page-user ul.tabs {
+  display: none;
+}
+
+
+
+
+
+
 
 
 
@@ -185,6 +248,7 @@ form#privatemsg-new .form-actions #edit-cancel {
 
 
 
+.pane-users-panel-pane-4 .pane-title,
 .pane-users-panel-pane-3 .pane-title,
 .pane-users-panel-pane-2 .pane-title,
 .pane-not-related-users .pane-title
@@ -217,11 +281,21 @@ form#privatemsg-new .form-actions #edit-cancel {
 }
 
 .view-users.view-display-id-panel_pane_4 {
-  background: #ffc266;
 }
 
 .view-user-basic-data {
   background: #ccc;
+  overflow: hidden;
+}
+
+.view-user-basic-data .views-field {
+  float: left;
+  width: 69%;
+}
+
+.view-user-basic-data .views-field-field-pictures
+{
+  width: 18%;
 }
 
 .view-users .views-field-name {
@@ -261,6 +335,7 @@ form#privatemsg-new .form-actions #edit-cancel {
 {
   position: absolute;
   margin-left: -100px;
+  margin-top: -43px;
 }
 
 .view-user-posts .views-field-name a

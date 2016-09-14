@@ -5,6 +5,25 @@
  */
 
 /**
+ * User track
+ */
+function motor_page_alter() {
+  global $user;
+  $prevtime = variable_get($user->name . '_time', 0);
+  $diff = 0;
+  if ($prevtime != 0) {
+    $diff = $prevtime - time();
+    variable_set($user->name . '_time', time());
+  }
+  $data = array(
+    'user-name' => $user->name,
+    'time' => date('Y-m-d H:i:s'),
+    'diff-min' => $diff / 60,
+  );
+  watchdog('user-track', print_r($data, 1));
+}
+
+/**
  * Implements hook_ctools_plugin_directory().
  */
 function motor_ctools_plugin_directory($module, $plugin) {
