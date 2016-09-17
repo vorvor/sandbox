@@ -29,6 +29,21 @@ function base_views_api($module = NULL, $api = NULL) {
 function base_image_default_styles() {
   $styles = array();
 
+  // Exported image style: big_box.
+  $styles['big_box'] = array(
+    'label' => 'Big box',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 300,
+          'height' => 300,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: box.
   $styles['box'] = array(
     'label' => 'box',

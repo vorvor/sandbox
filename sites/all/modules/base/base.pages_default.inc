@@ -164,6 +164,101 @@ function base_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'decide';
+  $page->task = 'page';
+  $page->admin_title = 'Decide';
+  $page->admin_description = '';
+  $page->path = 'decide';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_decide__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'decide';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '9de588b4-fb5c-411b-8da9-1d23b9c052f9';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_decide__panel';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-607ea89e-7e9d-468f-b27f-490bf393aac8';
+  $pane->panel = 'center';
+  $pane->type = 'decide';
+  $pane->subtype = 'decide';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '607ea89e-7e9d-468f-b27f-490bf393aac8';
+  $display->content['new-607ea89e-7e9d-468f-b27f-490bf393aac8'] = $pane;
+  $display->panels['center'][0] = 'new-607ea89e-7e9d-468f-b27f-490bf393aac8';
+  $pane = new stdClass();
+  $pane->pid = 'new-2350636b-26f7-4ac2-ae12-12fde98af468';
+  $pane->panel = 'center';
+  $pane->type = 'decide_order';
+  $pane->subtype = 'decide_order';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '2350636b-26f7-4ac2-ae12-12fde98af468';
+  $display->content['new-2350636b-26f7-4ac2-ae12-12fde98af468'] = $pane;
+  $display->panels['center'][1] = 'new-2350636b-26f7-4ac2-ae12-12fde98af468';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['decide'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'feed';
   $page->task = 'page';
   $page->admin_title = 'Feed';
@@ -270,6 +365,115 @@ function base_default_page_manager_pages() {
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['feed'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'login';
+  $page->task = 'page';
+  $page->admin_title = 'Login';
+  $page->admin_description = '';
+  $page->path = 'login';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_login__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'login';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'df8c3373-e0b0-4d41-8f85-909dae71eae7';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_login__panel';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-b7b9ddd4-8efd-4de9-b7f5-016893cf933a';
+  $pane->panel = 'center';
+  $pane->type = 'block';
+  $pane->subtype = 'formblock-user_register';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'user-registration',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'b7b9ddd4-8efd-4de9-b7f5-016893cf933a';
+  $display->content['new-b7b9ddd4-8efd-4de9-b7f5-016893cf933a'] = $pane;
+  $display->panels['center'][0] = 'new-b7b9ddd4-8efd-4de9-b7f5-016893cf933a';
+  $pane = new stdClass();
+  $pane->pid = 'new-22f6797e-1955-4a26-ad79-e831b9d09c3e';
+  $pane->panel = 'center';
+  $pane->type = 'block';
+  $pane->subtype = 'user-login';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'user-login',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '22f6797e-1955-4a26-ad79-e831b9d09c3e';
+  $display->content['new-22f6797e-1955-4a26-ad79-e831b9d09c3e'] = $pane;
+  $display->panels['center'][1] = 'new-22f6797e-1955-4a26-ad79-e831b9d09c3e';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['login'] = $page;
 
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */

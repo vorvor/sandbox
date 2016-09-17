@@ -407,6 +407,19 @@ form#privatemsg-new .form-actions #edit-cancel {
   margin: 0;
 }
 
+.view-user-posts #comments .comment-form .form-item-subject
+{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
 
 
 
