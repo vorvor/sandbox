@@ -295,3 +295,11 @@ function motor_compare_decides($uid1, $uid2, $tid) {
 
   return $percent . ':' . $p;
 }
+
+function motor_messages($uid) {
+  $query = db_select('pm_index', 'pm');
+  $query->condition('pm.recipient', $uid);
+  $query->fields('pm', array('thread_id'));
+  $result = $query->execute()->fetchAssoc();
+
+}

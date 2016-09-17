@@ -22,6 +22,10 @@
       $('.form-field-name-field-post-image a.browse').html('Add image');
       $('.form-field-name-field-film a.browse').html('Add film');
 
+      //$('.comments-wrapper').hide();
+      $('.open-comments').click(function() {
+        $('.comments-wrapper').slideToggle();
+      }).css('cursor', 'pointer');
     }
   };
 

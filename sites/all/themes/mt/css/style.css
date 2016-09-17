@@ -333,6 +333,15 @@ form#privatemsg-new .form-actions #edit-cancel {
   margin-bottom: 15px;
 }
 
+.view-user-posts .views-field-nid {
+  display: none;
+}
+
+.view-user-posts .views-row .view-comment .views-row {
+  padding: 0;
+  border-bottom: 1px solid #fff;
+}
+
 .view-user-posts .views-field-field-pictures,
 .view-user-posts .views-field-ur-action
 {
@@ -353,6 +362,56 @@ form#privatemsg-new .form-actions #edit-cancel {
   color: #fff;
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+.view-user-posts #comments
+{
+  padding: 6px;
+  border: 1px solid #fff;
+}
+
+.view-user-posts #comments h2,
+.view-user-posts #comments p
+{
+  margin: 0;
+}
+
+.view-user-posts #comments .field-name-comment-body {
+  border-bottom: 1px solid #fff;
+}
+
+.view-user-posts #comments header {
+  font-size: 0.8em;
+}
+
+.view-user-posts #comments .comment__form-title,
+.view-user-posts #comments .comment-form label
+{
+  display: none;
+}
+
+
+.view-user-posts #comments .comment-form
+{
+  padding-top: 20px;
+}
+
+.view-user-posts #comments .comment-form .form-item
+{
+  margin: 0;
+}
+
+
+
+
+
+
 
 .views-field-userlike
 {
