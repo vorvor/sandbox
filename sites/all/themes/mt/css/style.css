@@ -76,8 +76,6 @@ body {
 
 
 
-
-
 #user-relationships-ui-request.confirmation
 {
   clear: both;
@@ -92,6 +90,15 @@ body {
 
 
 
+.pane-greeting-panel-pane-1,
+.pane-system-main-menu
+{
+  float: left;
+  clear: none;
+  background-color: #7E8F7C;
+  width: 49%;
+}
+
 
 .pane-system-main-menu ul.menu
 {
@@ -101,9 +108,11 @@ body {
 
 .pane-system-main-menu
 {
-  float: left;
+  float: right;
   overflow: hidden;
-  height: 70px;
+  height: 44px;
+  width: 51%;
+  z-index:101;
 }
 
 .pane-system-main-menu ul
@@ -120,10 +129,10 @@ body {
   list-style: none;
 }
 
-.pane-system-main-menu ul li a,
+.pane-system-main-menu ul.menu li a,
 .pane-menu-menu-user-links ul li a
 {
-  color: #3B3738;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -251,6 +260,12 @@ form#privatemsg-new .form-actions #edit-cancel {
 
 
 
+
+
+.pane-users-panel-pane-3 {
+  margin-top:20px;
+}
+
 .pane-users-panel-pane-4 .pane-title,
 .pane-users-panel-pane-3 .pane-title,
 .pane-users-panel-pane-2 .pane-title,
@@ -362,6 +377,24 @@ form#privatemsg-new .form-actions #edit-cancel {
   color: #fff;
   text-decoration: none;
 }
+
+
+.view-user-posts .views-row .comment-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.view-user-posts .views-row .comment-wrapper h2
+{
+  font-size:1em;
+  line-height: 1em;
+}
+
+
+
+
+
+
 
 
 
@@ -479,11 +512,17 @@ form#privatemsg-new .form-actions #edit-cancel {
   overflow: hidden;
 }
 
+.view-user-posts .views-field-field-post-image ul,
+.view-user-posts .views-field-field-post-image ul li
+{
+  margin: 0;
+  padding: 0;
+}
+
 .view-user-posts .views-field-field-post-image ul li {
   width: 10%;
   float: left;
   list-style-type: none;
-  margin: 10px;
 }
 
 .view-user-posts .views-field-field-post-image ul li:nth-child(1) {
@@ -505,8 +544,6 @@ form#privatemsg-new .form-actions #edit-cancel {
 
 
 .contextual-links-region {
-  width: auto;
-  clear: both;
 }
 
 /*
