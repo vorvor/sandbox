@@ -9,7 +9,10 @@
  */
 function motor_page_alter() {
   global $user;
-  if ($user->uid !==0 && $user->uid !== 1) {
+  if ($user->uid ==0 || $user->uid == 1) {
+    return;
+  }
+    if ($user->uid !==0 && $user->uid !== 1) {
     $prevtime = variable_get($user->name . '_time', 0);
     $diff = 0;
     if ($prevtime != 0) {
