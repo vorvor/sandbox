@@ -26,6 +26,15 @@
       $('.open-comments').click(function() {
         $('.comments-wrapper').slideToggle();
       }).css('cursor', 'pointer');
+
+
+      $('form.comment-form .form-textarea')
+        .val('Szóljon hozzá!')
+        .click(function() {
+          $(this).val('');
+        })
+        .css('color', '#aaa');
+
     }
   };
 

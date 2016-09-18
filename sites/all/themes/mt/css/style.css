@@ -96,7 +96,7 @@ body {
   float: left;
   clear: none;
   background-color: #7E8F7C;
-  width: 49%;
+  width: 47%;
 }
 
 
@@ -111,7 +111,7 @@ body {
   float: right;
   overflow: hidden;
   height: 44px;
-  width: 51%;
+  width: 53%;
   z-index:101;
 }
 
@@ -289,6 +289,17 @@ form#privatemsg-new .form-actions #edit-cancel {
   width: 18%;
 }
 
+.view-users .views-row .views-field-ur-action
+{
+}
+
+.view-users .views-row .views-field-ur-action a
+{
+  text-decoration: none;
+  font-size: 0.9em;
+  display: block;
+}
+
 .view-users.view-display-id-panel_pane_1 {
 }
 
@@ -317,7 +328,7 @@ form#privatemsg-new .form-actions #edit-cancel {
 }
 
 .view-users .views-field-name {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   padding: 6px 10px;
   width: 200px;
   position: absolute;
@@ -326,6 +337,7 @@ form#privatemsg-new .form-actions #edit-cancel {
 
 .view-users .views-field-name a {
   text-decoration: none;
+  color: #222;
 }
 
 
@@ -422,6 +434,11 @@ form#privatemsg-new .form-actions #edit-cancel {
 
 .view-user-posts #comments form .field-name-comment-body {
   background: none;
+}
+
+.view-user-posts #comments form .username
+{
+  display: none;
 }
 
 .view-user-posts #comments header {
@@ -601,8 +618,13 @@ form#privatemsg-new .form-actions #edit-cancel {
   margin: 0;
 }
 
-.browse
+.browse,
+.view-display-id-panel_pane_1 .views-field-ur-action a,
+.view-display-id-panel_pane_2 .views-field-nothing a,
+.view-display-id-panel_pane_3 .views-field-nothing a,
+.view-display-id-panel_pane_4 .views-field-nothing a
 {
+  text-align: center;
   -webkit-appearance: none;
   -moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
   -webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
@@ -629,7 +651,18 @@ form#privatemsg-new .form-actions #edit-cancel {
   text-shadow:0px 1px 0px #854629;
 }
 
-.browse:hover {
+.view-display-id-panel_pane_2 .views-field-ur-action,
+.view-display-id-panel_pane_3 .views-field-ur-action,
+.view-display-id-panel_pane_4 .views-field-ur-action
+{
+  display: none;
+}
+
+.browse:hover,
+.view-display-id-panel_pane_2 .views-field-nothing a:hover,
+.view-display-id-panel_pane_3 .views-field-nothing a:hover,
+.view-display-id-panel_pane_4 .views-field-nothing a:hover
+{
   background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
   background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
   background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
