@@ -20,7 +20,7 @@ function base_locale_default_languages() {
     'plurals' => 0,
     'formula' => '',
     'domain' => '',
-    'prefix' => '',
+    'prefix' => 'en',
     'weight' => 0,
   );
   // Exported language: hu.
@@ -30,8 +30,8 @@ function base_locale_default_languages() {
     'native' => 'Magyar',
     'direction' => 0,
     'enabled' => 1,
-    'plurals' => 0,
-    'formula' => '',
+    'plurals' => 2,
+    'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => 'hu',
     'weight' => 0,

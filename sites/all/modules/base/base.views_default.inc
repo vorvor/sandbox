@@ -22,30 +22,31 @@ function base_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Comments';
+  $handler->display->display_options['title'] = 'Hozzászólások';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access comments';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Alaphelyzet';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Comment: Content */
+  /* Relationship: Hozzászólás: Tartalom */
   $handler->display->display_options['relationships']['nid']['id'] = 'nid';
   $handler->display->display_options['relationships']['nid']['table'] = 'comment';
   $handler->display->display_options['relationships']['nid']['field'] = 'nid';
   $handler->display->display_options['relationships']['nid']['required'] = TRUE;
-  /* Field: Comment: Author uid */
+  /* Mező: Hozzászólás: Author uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'comment';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
   $handler->display->display_options['fields']['uid']['label'] = '';
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
-  /* Field: Comment: Author */
+  /* Mező: Hozzászólás: Szerző */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'comment';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -54,34 +55,35 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['path'] = 'user-page/[uid]';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: Comment: Comment */
+  /* Mező: Hozzászólás: Comment */
   $handler->display->display_options['fields']['comment_body']['id'] = 'comment_body';
   $handler->display->display_options['fields']['comment_body']['table'] = 'field_data_comment_body';
   $handler->display->display_options['fields']['comment_body']['field'] = 'comment_body';
   $handler->display->display_options['fields']['comment_body']['label'] = '';
   $handler->display->display_options['fields']['comment_body']['element_label_colon'] = FALSE;
-  /* Sort criterion: Comment: Post date */
+  /* Sort criterion: Hozzászólás: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'comment';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Nid */
+  /* Contextual filter: Tartalom: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
   $handler->display->display_options['arguments']['nid']['relationship'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Mind';
   $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Comment: Approved */
+  /* Filter criterion: Hozzászólás: Approved */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'comment';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Tartalom: Közzétéve */
   $handler->display->display_options['filters']['status_node']['id'] = 'status_node';
   $handler->display->display_options['filters']['status_node']['table'] = 'node';
   $handler->display->display_options['filters']['status_node']['field'] = 'status';
@@ -94,15 +96,15 @@ function base_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $translatables['comment'] = array(
     t('Master'),
-    t('Comments'),
+    t('Hozzászólások'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Alaphelyzet'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Content'),
-    t('All'),
+    t('Tartalom'),
+    t('Mind'),
     t('Block'),
   );
   $export['comment'] = $view;
@@ -125,18 +127,19 @@ function base_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Alaphelyzet';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
+  /* Mező: Tartalom: Cím */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Type (editable) */
+  /* Mező: Tartalom: Type (editable) */
   $handler->display->display_options['fields']['field_type_editable']['id'] = 'field_type_editable';
   $handler->display->display_options['fields']['field_type_editable']['table'] = 'field_data_field_type';
   $handler->display->display_options['fields']['field_type_editable']['field'] = 'field_type_editable';
@@ -144,19 +147,19 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_type_editable']['widget_type'] = 'options_select';
   $handler->display->display_options['fields']['field_type_editable']['suppress_label'] = 0;
   $handler->display->display_options['fields']['field_type_editable']['suppress_description'] = 0;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Tartalom: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Tartalom: Közzétéve */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Tartalom: Típus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -172,7 +175,7 @@ function base_views_default_views() {
     t('Decide Admin'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Alaphelyzet'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
@@ -199,10 +202,15 @@ function base_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Alaphelyzet';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« első';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ előző';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'következő ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'utolsó »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: User: Name */
+  /* Mező: Felhasználó: Név */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -212,26 +220,26 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: Global: Custom text */
+  /* Mező: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Hey [name]! How Ya Doin\'?';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: User: Created date */
+  /* Sort criterion: Felhasználó: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: User: Active */
+  /* Filter criterion: Felhasználó: Aktív */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: Current */
+  /* Filter criterion: Felhasználó: Current */
   $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
   $handler->display->display_options['filters']['uid_current']['table'] = 'users';
   $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
@@ -243,17 +251,17 @@ function base_views_default_views() {
     t('Master'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Alaphelyzet'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
+    t('« első'),
+    t('‹ előző'),
+    t('következő ›'),
+    t('utolsó »'),
     t('Hey [name]! How Ya Doin\'?'),
     t('Content pane'),
     t('View panes'),
@@ -272,12 +280,13 @@ function base_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Statistics';
+  $handler->display->display_options['title'] = 'Statisztikák';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Alaphelyzet';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -325,31 +334,31 @@ function base_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Relationship: Access log: User */
+  /* Relationship: Access log: Felhasználó */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'accesslog';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
-  /* Field: Access log: Aid */
+  /* Mező: Access log: Aid */
   $handler->display->display_options['fields']['aid']['id'] = 'aid';
   $handler->display->display_options['fields']['aid']['table'] = 'accesslog';
   $handler->display->display_options['fields']['aid']['field'] = 'aid';
-  /* Field: Access log: Hostname */
+  /* Mező: Access log: Kiszolgáló neve */
   $handler->display->display_options['fields']['hostname']['id'] = 'hostname';
   $handler->display->display_options['fields']['hostname']['table'] = 'accesslog';
   $handler->display->display_options['fields']['hostname']['field'] = 'hostname';
-  /* Field: Access log: Page title */
+  /* Mező: Access log: Oldal címe */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'accesslog';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  /* Field: Access log: Path */
+  /* Mező: Access log: Útvonal */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'accesslog';
   $handler->display->display_options['fields']['path']['field'] = 'path';
-  /* Field: Access log: Referrer */
+  /* Mező: Access log: Hivatkozó */
   $handler->display->display_options['fields']['url']['id'] = 'url';
   $handler->display->display_options['fields']['url']['table'] = 'accesslog';
   $handler->display->display_options['fields']['url']['field'] = 'url';
-  /* Field: User: Name */
+  /* Mező: Felhasználó: Név */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -360,10 +369,10 @@ function base_views_default_views() {
   $handler->display->display_options['path'] = 'statistics';
   $translatables['statistics'] = array(
     t('Master'),
-    t('Statistics'),
+    t('Statisztikák'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Alaphelyzet'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
@@ -371,11 +380,11 @@ function base_views_default_views() {
     t('Aid'),
     t('.'),
     t(','),
-    t('Hostname'),
-    t('Page title'),
-    t('Path'),
-    t('Referrer'),
-    t('Name'),
+    t('Kiszolgáló neve'),
+    t('Oldal címe'),
+    t('Útvonal'),
+    t('Hivatkozó'),
+    t('Név'),
     t('Page'),
   );
   $export['statistics'] = $view;
@@ -398,10 +407,15 @@ function base_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Alaphelyzet';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« első';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ előző';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'következő ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'utolsó »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: User: Uid */
+  /* Mező: Felhasználó: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
@@ -409,7 +423,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
-  /* Field: User: Pictures */
+  /* Mező: Felhasználó: Pictures */
   $handler->display->display_options['fields']['field_pictures']['id'] = 'field_pictures';
   $handler->display->display_options['fields']['field_pictures']['table'] = 'field_data_field_pictures';
   $handler->display->display_options['fields']['field_pictures']['field'] = 'field_pictures';
@@ -425,7 +439,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_pictures']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_pictures']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_pictures']['separator'] = '';
-  /* Field: User: Name */
+  /* Mező: Felhasználó: Név */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -436,18 +450,18 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: User: Looking for */
+  /* Mező: Felhasználó: Looking for */
   $handler->display->display_options['fields']['field_looking_for']['id'] = 'field_looking_for';
   $handler->display->display_options['fields']['field_looking_for']['table'] = 'field_data_field_looking_for';
   $handler->display->display_options['fields']['field_looking_for']['field'] = 'field_looking_for';
-  /* Field: Privatemsg: Send Privatemsg link */
+  /* Mező: Privatemsg: Send Privatemsg link */
   $handler->display->display_options['fields']['privatemsg_link']['id'] = 'privatemsg_link';
   $handler->display->display_options['fields']['privatemsg_link']['table'] = 'users';
   $handler->display->display_options['fields']['privatemsg_link']['field'] = 'privatemsg_link';
   $handler->display->display_options['fields']['privatemsg_link']['label'] = '';
   $handler->display->display_options['fields']['privatemsg_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['privatemsg_link']['return'] = 1;
-  /* Field: User relationships: User relationship add / remove action */
+  /* Mező: User relationships: User relationship add / remove action */
   $handler->display->display_options['fields']['ur_action']['id'] = 'ur_action';
   $handler->display->display_options['fields']['ur_action']['table'] = 'users';
   $handler->display->display_options['fields']['ur_action']['field'] = 'ur_action';
@@ -460,29 +474,30 @@ function base_views_default_views() {
     'requested' => 'requested',
     'received' => 'received',
   );
-  /* Field: User: Edit link */
+  /* Mező: Felhasználó: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'users';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'Edit profile';
-  /* Sort criterion: User: Created date */
+  /* Sort criterion: Felhasználó: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: User: Uid */
+  /* Contextual filter: Felhasználó: Uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
   $handler->display->display_options['arguments']['uid']['table'] = 'users';
   $handler->display->display_options['arguments']['uid']['field'] = 'uid';
   $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['exception']['title'] = 'Mind';
   $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
   $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: User: Active */
+  /* Filter criterion: Felhasználó: Aktív */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -508,14 +523,14 @@ function base_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: User: Active */
+  /* Filter criterion: Felhasználó: Aktív */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: Current */
+  /* Filter criterion: Felhasználó: Current */
   $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
   $handler->display->display_options['filters']['uid_current']['table'] = 'users';
   $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
@@ -524,21 +539,21 @@ function base_views_default_views() {
     t('Master'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Alaphelyzet'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
+    t('« első'),
+    t('‹ előző'),
+    t('következő ›'),
+    t('utolsó »'),
     t('Looking for'),
-    t('Send message'),
+    t('Üzenet küldése'),
     t('Edit profile'),
-    t('All'),
+    t('Mind'),
     t('Content pane'),
     t('View panes'),
     t('Content pane 2'),
@@ -562,10 +577,15 @@ function base_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Alaphelyzet';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« első';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ előző';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'következő ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'utolsó »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Content: Author */
+  /* Relationship: Tartalom: Szerző */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
@@ -582,7 +602,7 @@ function base_views_default_views() {
   $handler->display->display_options['relationships']['flag_user_content_rel']['relationship'] = 'uid';
   $handler->display->display_options['relationships']['flag_user_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_user_content_rel']['flag'] = 'like';
-  /* Field: User: Uid */
+  /* Mező: Felhasználó: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
@@ -591,7 +611,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
-  /* Field: User: Name */
+  /* Mező: Felhasználó: Név */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -601,7 +621,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['path'] = 'user-page/[uid]';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: User: Pictures */
+  /* Mező: Felhasználó: Pictures */
   $handler->display->display_options['fields']['field_pictures']['id'] = 'field_pictures';
   $handler->display->display_options['fields']['field_pictures']['table'] = 'field_data_field_pictures';
   $handler->display->display_options['fields']['field_pictures']['field'] = 'field_pictures';
@@ -618,7 +638,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_pictures']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_pictures']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_pictures']['separator'] = '';
-  /* Field: User relationships: User relationship add / remove action */
+  /* Mező: User relationships: User relationship add / remove action */
   $handler->display->display_options['fields']['ur_action']['id'] = 'ur_action';
   $handler->display->display_options['fields']['ur_action']['table'] = 'users';
   $handler->display->display_options['fields']['ur_action']['field'] = 'ur_action';
@@ -632,21 +652,21 @@ function base_views_default_views() {
     'requested' => 'requested',
     'received' => 'received',
   );
-  /* Field: Content: Edit link */
+  /* Mező: Tartalom: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
-  /* Field: Content: Body */
+  $handler->display->display_options['fields']['edit_node']['text'] = 'szerkesztés';
+  /* Mező: Tartalom: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['hide_empty'] = TRUE;
-  /* Field: Content: Image */
+  /* Mező: Tartalom: Image */
   $handler->display->display_options['fields']['field_post_image']['id'] = 'field_post_image';
   $handler->display->display_options['fields']['field_post_image']['table'] = 'field_data_field_post_image';
   $handler->display->display_options['fields']['field_post_image']['field'] = 'field_post_image';
@@ -659,7 +679,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_post_image']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_post_image']['multi_type'] = 'ul';
   $handler->display->display_options['fields']['field_post_image']['separator'] = '';
-  /* Field: Content: Media */
+  /* Mező: Tartalom: Media */
   $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
   $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
   $handler->display->display_options['fields']['field_media']['field'] = 'field_media';
@@ -669,7 +689,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_media']['settings'] = array(
     'file_view_mode' => 'default',
   );
-  /* Field: Content: Url */
+  /* Mező: Tartalom: Url */
   $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
   $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
   $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
@@ -680,48 +700,49 @@ function base_views_default_views() {
     'trim_length' => '80',
     'nofollow' => 0,
   );
-  /* Field: Flags: Flag link */
+  /* Mező: Flags: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = '';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
-  /* Field: Content: Nid */
+  /* Mező: Tartalom: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Custom: User like */
+  /* Mező: Egyéni: User like */
   $handler->display->display_options['fields']['userlike']['id'] = 'userlike';
   $handler->display->display_options['fields']['userlike']['table'] = 'motor';
   $handler->display->display_options['fields']['userlike']['field'] = 'userlike';
   $handler->display->display_options['fields']['userlike']['label'] = '';
   $handler->display->display_options['fields']['userlike']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Tartalom: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: User: Uid */
+  /* Contextual filter: Felhasználó: Uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
   $handler->display->display_options['arguments']['uid']['table'] = 'users';
   $handler->display->display_options['arguments']['uid']['field'] = 'uid';
   $handler->display->display_options['arguments']['uid']['relationship'] = 'uid';
   $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['exception']['title'] = 'Mind';
   $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'node';
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Tartalom: Közzétéve */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Tartalom: Típus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -737,14 +758,14 @@ function base_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Tartalom: Közzétéve */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Tartalom: Típus */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -755,22 +776,22 @@ function base_views_default_views() {
     t('Master'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Alaphelyzet'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
+    t('« első'),
+    t('‹ előző'),
+    t('következő ›'),
+    t('utolsó »'),
     t('author'),
     t('flag'),
     t('user flagged content'),
-    t('edit'),
-    t('All'),
+    t('szerkesztés'),
+    t('Mind'),
     t('current user'),
     t('View panes'),
     t('all user'),
@@ -789,21 +810,26 @@ function base_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'New users';
+  $handler->display->display_options['title'] = 'Új tagok';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access user profiles';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Alaphelyzet';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« első';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ előző';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'következő ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'utolsó »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: User relationships: RTID */
   $handler->display->display_options['relationships']['rtid']['id'] = 'rtid';
   $handler->display->display_options['relationships']['rtid']['table'] = 'user_relationships';
   $handler->display->display_options['relationships']['rtid']['field'] = 'rtid';
-  /* Field: User: Uid */
+  /* Mező: Felhasználó: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
@@ -811,7 +837,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
-  /* Field: User: Name */
+  /* Mező: Felhasználó: Név */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -823,7 +849,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: User: Pictures */
+  /* Mező: Felhasználó: Pictures */
   $handler->display->display_options['fields']['field_pictures']['id'] = 'field_pictures';
   $handler->display->display_options['fields']['field_pictures']['table'] = 'field_data_field_pictures';
   $handler->display->display_options['fields']['field_pictures']['field'] = 'field_pictures';
@@ -839,7 +865,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_pictures']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_pictures']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_pictures']['separator'] = '';
-  /* Field: User relationships: User relationship add / remove action */
+  /* Mező: User relationships: User relationship add / remove action */
   $handler->display->display_options['fields']['ur_action']['id'] = 'ur_action';
   $handler->display->display_options['fields']['ur_action']['table'] = 'users';
   $handler->display->display_options['fields']['ur_action']['field'] = 'ur_action';
@@ -852,19 +878,19 @@ function base_views_default_views() {
     'requested' => 'requested',
     'received' => 'received',
   );
-  /* Sort criterion: User: Created date */
+  /* Sort criterion: Felhasználó: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: User: Active */
+  /* Filter criterion: Felhasználó: Aktív */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: Current */
+  /* Filter criterion: Felhasználó: Current */
   $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
   $handler->display->display_options['filters']['uid_current']['table'] = 'users';
   $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
@@ -879,7 +905,7 @@ function base_views_default_views() {
   $handler = $view->new_display('panel_pane', 'All user', 'panel_pane_1');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: User: Uid */
+  /* Mező: Felhasználó: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
@@ -887,7 +913,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
-  /* Field: User: Name */
+  /* Mező: Felhasználó: Név */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -898,7 +924,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: User: Pictures */
+  /* Mező: Felhasználó: Pictures */
   $handler->display->display_options['fields']['field_pictures']['id'] = 'field_pictures';
   $handler->display->display_options['fields']['field_pictures']['table'] = 'field_data_field_pictures';
   $handler->display->display_options['fields']['field_pictures']['field'] = 'field_pictures';
@@ -914,7 +940,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_pictures']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_pictures']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_pictures']['separator'] = '';
-  /* Field: User relationships: User relationship add / remove action */
+  /* Mező: User relationships: User relationship add / remove action */
   $handler->display->display_options['fields']['ur_action']['id'] = 'ur_action';
   $handler->display->display_options['fields']['ur_action']['table'] = 'users';
   $handler->display->display_options['fields']['ur_action']['field'] = 'ur_action';
@@ -928,10 +954,11 @@ function base_views_default_views() {
     'received' => 'received',
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: User: Uid */
+  /* Contextual filter: Felhasználó: Uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
   $handler->display->display_options['arguments']['uid']['table'] = 'users';
   $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['exception']['title'] = 'Mind';
   $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
@@ -939,14 +966,14 @@ function base_views_default_views() {
   $handler->display->display_options['arguments']['uid']['break_phrase'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: User: Active */
+  /* Filter criterion: Felhasználó: Aktív */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: Current */
+  /* Filter criterion: Felhasználó: Current */
   $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
   $handler->display->display_options['filters']['uid_current']['table'] = 'users';
   $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
@@ -958,14 +985,14 @@ function base_views_default_views() {
   $handler->display->display_options['title'] = 'Users you interested in';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: User: Active */
+  /* Filter criterion: Felhasználó: Aktív */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: Current */
+  /* Filter criterion: Felhasználó: Current */
   $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
   $handler->display->display_options['filters']['uid_current']['table'] = 'users';
   $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
@@ -992,7 +1019,7 @@ function base_views_default_views() {
   $handler->display->display_options['relationships']['requester_id']['table'] = 'user_relationships';
   $handler->display->display_options['relationships']['requester_id']['field'] = 'requester_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: User: Uid */
+  /* Mező: Felhasználó: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
@@ -1001,7 +1028,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
-  /* Field: User: Name */
+  /* Mező: Felhasználó: Név */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -1014,7 +1041,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: User: Pictures */
+  /* Mező: Felhasználó: Pictures */
   $handler->display->display_options['fields']['field_pictures']['id'] = 'field_pictures';
   $handler->display->display_options['fields']['field_pictures']['table'] = 'field_data_field_pictures';
   $handler->display->display_options['fields']['field_pictures']['field'] = 'field_pictures';
@@ -1031,7 +1058,7 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['field_pictures']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_pictures']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_pictures']['separator'] = '';
-  /* Field: User relationships: User relationship add / remove action */
+  /* Mező: User relationships: User relationship add / remove action */
   $handler->display->display_options['fields']['ur_action']['id'] = 'ur_action';
   $handler->display->display_options['fields']['ur_action']['table'] = 'users';
   $handler->display->display_options['fields']['ur_action']['field'] = 'ur_action';
@@ -1047,7 +1074,7 @@ function base_views_default_views() {
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: User: Active */
+  /* Filter criterion: Felhasználó: Aktív */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1069,7 +1096,7 @@ function base_views_default_views() {
   /* Display: Partners */
   $handler = $view->new_display('panel_pane', 'Partners', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Yaay! Your partners';
+  $handler->display->display_options['title'] = 'Ismerősök';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: User relationships: RTID */
   $handler->display->display_options['relationships']['rtid']['id'] = 'rtid';
@@ -1078,14 +1105,14 @@ function base_views_default_views() {
   $handler->display->display_options['relationships']['rtid']['required'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: User: Active */
+  /* Filter criterion: Felhasználó: Aktív */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: Current */
+  /* Filter criterion: Felhasználó: Current */
   $handler->display->display_options['filters']['uid_current']['id'] = 'uid_current';
   $handler->display->display_options['filters']['uid_current']['table'] = 'users';
   $handler->display->display_options['filters']['uid_current']['field'] = 'uid_current';
@@ -1102,31 +1129,31 @@ function base_views_default_views() {
   $handler->display->display_options['filters']['approved']['value'] = '1';
   $translatables['users'] = array(
     t('Master'),
-    t('New users'),
+    t('Új tagok'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Alaphelyzet'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
+    t('« első'),
+    t('‹ előző'),
+    t('következő ›'),
+    t('utolsó »'),
     t('rtid'),
     t('user-page/[uid]'),
     t('All user'),
-    t('All'),
+    t('Mind'),
     t('View panes'),
     t('User you on'),
     t('Users you interested in'),
     t('Inquiring users'),
     t('requester'),
     t('Partners'),
-    t('Yaay! Your partners'),
+    t('Ismerősök'),
   );
   $export['users'] = $view;
 

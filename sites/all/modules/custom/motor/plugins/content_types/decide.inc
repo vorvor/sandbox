@@ -17,7 +17,10 @@ $plugin = array(
  * Render callback function.
  */
 function motor_decide_content_type_render() {
-  $images = motor_throw_decide_item();
+  $tid = arg(1);
+  if (!empty($tid)) {
+    $images = motor_throw_decide_item();
+  }
   $pane = new stdClass();
   $pane->title = t('Decide');
 
@@ -31,18 +34,47 @@ function motor_decide_content_type_render() {
     )
   );
 
+  if (empty($tid)) {
+    $pane->content += array(
+      'label' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => 'decide-label',
+        ),
+        'content' => array(
+          '#markup' => t('Choose game!'),
+        ),
+      ),
+      'decide1' => array(
+        '#type' => 'container',
+        'content' => array(
+          '#markup' =>  views_embed_view('decide_menu', 'block'),
+        ),
+      ),
+    );
+  }
   if (empty($images)) {
     $pane->content += array(
       'decide1' => array(
         '#type' => 'container',
         'content' => array(
-          '#markup' => 'Kipörgetted',
+          '#markup' => t('You finished that game! Choose another one!')
+            . l(t('Back to game choose'), 'decide'),
         ),
       ),
     );
   }
   else {
     $pane->content += array(
+      'label' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => 'decide-label',
+        ),
+        'content' => array(
+          '#markup' => t('Which one you prefer?'),
+        ),
+      ),
       'decide1' => array(
         '#type' => 'container',
         '#attributes' => array(

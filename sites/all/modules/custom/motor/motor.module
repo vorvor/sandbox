@@ -273,7 +273,12 @@ function motor_check_order($nid1, $nid2) {
 function motor_compare_decides($uid1, $uid2, $tid) {
   $images[] = motor_decide_order($uid1, $tid, TRUE);
   $images[] = motor_decide_order($uid2, $tid, TRUE);
+  if (count($images[0]) == 0 || count($images[1]) == 0) {
+    return NULL;
+  }
   $diff = [];
+  $s1 = [];
+  $s2 = [];
   $sum = 0;
   foreach ($images as $image) {
     for ($c = 0; $c < count($image); $c++) {
@@ -288,7 +293,7 @@ function motor_compare_decides($uid1, $uid2, $tid) {
       }
     }
   }
-  $max = count($image) * count($image);
+  $max = count($images[0]) * count($images[0]);
   $percent = 100 - ($sum / $max) * 100;
 
   $s1 = implode('', $s1);
@@ -296,7 +301,7 @@ function motor_compare_decides($uid1, $uid2, $tid) {
   $p = 0;
   similar_text($s1, $s2, $p);
 
-  return $percent . ':' . $p;
+  return $p . '%';
 }
 
 function motor_messages($uid) {
