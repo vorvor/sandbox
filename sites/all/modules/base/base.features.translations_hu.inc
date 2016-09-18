@@ -4291,7 +4291,7 @@ function base_translations_hu_defaults() {
   $translations['hu:default']['1c66003148091dd210fb0ddb1be2ab36'] = array(
     'source' => 'No alias',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/path/path.js',
     'translation' => 'Nincs álnév',
     'plid' => 0,
     'plural' => 0,
@@ -6060,7 +6060,7 @@ function base_translations_hu_defaults() {
   $translations['hu:default']['26035f5354afb729c61d704ecbd14053'] = array(
     'source' => 'New revision',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/node.js',
     'translation' => 'Új változat',
     'plid' => 0,
     'plural' => 0,
@@ -9453,7 +9453,7 @@ else {
   $translations['hu:default']['3ab40e0bda0106f188925043af5c1dfb'] = array(
     'source' => 'Alias: @alias',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/path/path.js',
     'translation' => 'Álnév: @alias',
     'plid' => 0,
     'plural' => 0,
@@ -12797,7 +12797,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['hu:default']['4db85a6b2b06c0fc8ebff6f19c41eddc'] = array(
     'source' => 'No revision',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/node.js',
     'translation' => 'Nincs változat',
     'plid' => 0,
     'plural' => 0,
@@ -13895,7 +13895,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['hu:default']['544ddb0ec2e8f5e130cc50cfd852ba8a'] = array(
     'source' => 'Hide summary',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/field/modules/text/text.js',
     'translation' => 'Összefoglaló elrejtése',
     'plid' => 0,
     'plural' => 0,
@@ -14237,7 +14237,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['hu:default']['566a2612a4245e686d5f81fc7f11c67d'] = array(
     'source' => 'By @name',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/node.js',
     'translation' => 'Szerző: @name',
     'plid' => 0,
     'plural' => 0,
@@ -27335,7 +27335,7 @@ This link expires in one day and nothing will happen if it is not used.
   $translations['hu:default']['a448087af44bd9fb2c7e09037a20bca3'] = array(
     'source' => 'Not in menu',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/menu/menu.js',
     'translation' => 'Nincs menüben',
     'plid' => 0,
     'plural' => 0,
@@ -33014,7 +33014,7 @@ password: Your password
   $translations['hu:default']['c2ee56276e5c317ee555a78ca0f1896b'] = array(
     'source' => 'By @name on @date',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/node.js',
     'translation' => 'Szerző: @name (@date)',
     'plid' => 0,
     'plural' => 0,
@@ -34702,7 +34702,7 @@ This link can only be used once to log in and will lead you to a page where you 
   $translations['hu:default']['ce3a658a9f215bbcf3c11078bdfdbf8e'] = array(
     'source' => '@number comments per page',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/comment/comment-node-form.js',
     'translation' => '@number hozzászólás egy oldalon',
     'plid' => 0,
     'plural' => 0,
@@ -35818,7 +35818,7 @@ This link can only be used once to log in and will lead you to a page where you 
   $translations['hu:default']['d470b5cb00092952c8de5c17e7531b8c'] = array(
     'source' => 'Not published',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/node.js',
     'translation' => 'Rejtett',
     'plid' => 0,
     'plural' => 0,
@@ -37573,7 +37573,7 @@ Your account on [site:name] has been blocked.
   $translations['hu:default']['e0aa021e21dddbd6d8cecec71e9cf564'] = array(
     'source' => 'OK',
     'context' => '',
-    'location' => '',
+    'location' => '; sites/all/modules/contrib/media/js/media.popups.js',
     'translation' => 'OK',
     'plid' => 0,
     'plural' => 0,
@@ -40219,7 +40219,7 @@ Your account on [site:name] has been blocked.
   $translations['hu:default']['f15dceb01634a6c4e6c88e42ad05c6a9'] = array(
     'source' => 'Edit summary',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/field/modules/text/text.js',
     'translation' => 'Összefoglaló szerkesztése',
     'plid' => 0,
     'plural' => 0,
