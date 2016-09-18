@@ -27,6 +27,23 @@ function base_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
+  // Exported menu link: main-menu_feed:feed.
+  $menu_links['main-menu_feed:feed'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'feed',
+    'router_path' => 'feed',
+    'link_title' => 'Feed',
+    'options' => array(
+      'identifier' => 'main-menu_feed:feed',
+    ),
+    'module' => 'system',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
   // Exported menu link: main-menu_home:<front>.
   $menu_links['main-menu_home:<front>'] = array(
     'menu_name' => 'main-menu',
@@ -42,6 +59,26 @@ function base_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: main-menu_kijelentkezs:user/logout.
+  $menu_links['main-menu_kijelentkezs:user/logout'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'user/logout',
+    'router_path' => 'user/logout',
+    'link_title' => 'Kijelentkezés',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_kijelentkezs:user/logout',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: main-menu_messages:messages.
@@ -64,12 +101,35 @@ function base_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
+  // Exported menu link: main-menu_posztolj-te-is:node/add/post.
+  $menu_links['main-menu_posztolj-te-is:node/add/post'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'node/add/post',
+    'router_path' => 'node/add/post',
+    'link_title' => 'Posztolj te is!',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_posztolj-te-is:node/add/post',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'customized' => 1,
+  );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Dashboard');
+  t('Feed');
   t('Home');
+  t('Kijelentkezés');
   t('Messages');
+  t('Posztolj te is!');
 
   return $menu_links;
 }
