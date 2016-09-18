@@ -37,6 +37,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Action', array(), array('context' => ''));
+  $translations['hu:default']['005ac1756f875895c381331c7fa6db67'] = array(
+    'source' => 'Plural name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Többes szám neve',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Plural name', array(), array('context' => ''));
   $translations['hu:default']['0072c685433ecb2a8aa2d8ad35ef5bb9'] = array(
     'source' => 'Save blocks',
     'context' => '',
@@ -136,6 +145,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('The username cannot begin with a space.', array(), array('context' => ''));
+  $translations['hu:default']['00de5b9741742d276e488925b2762563'] = array(
+    'source' => 'Edit type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Típus szerkesztése',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Edit type', array(), array('context' => ''));
   $translations['hu:default']['010071d75d4737954f59223ebc45f79c'] = array(
     'source' => 'The content access permissions have not been properly rebuilt.',
     'context' => '',
@@ -514,6 +532,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Asturian', array(), array('context' => ''));
+  $translations['hu:default']['03d947a2158373c3b9d74325850cb8b9'] = array(
+    'source' => 'Post',
+    'context' => '',
+    'location' => '/admin/config/regional/language?render=overlay',
+    'translation' => 'Posztolj te is!',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Post', array(), array('context' => ''));
   $translations['hu:default']['03ddc55d7f9fcf1fc96a9a299161a300'] = array(
     'source' => 'This role will be automatically assigned new permissions whenever a module is enabled. Changing this setting will not affect existing permissions.',
     'context' => '',
@@ -868,6 +895,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('HTTP request status', array(), array('context' => ''));
+  $translations['hu:default']['05fec117126202a92c23699fa18796ca'] = array(
+    'source' => 'pending requests',
+    'context' => '',
+    'location' => '',
+    'translation' => 'függő felkérések',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('pending requests', array(), array('context' => ''));
   $translations['hu:default']['061031713a72f1ae7cd750532cc42f6e'] = array(
     'source' => 'The Aggregator module is an on-site syndicator and news reader that gathers and displays fresh content from RSS-, RDF-, and Atom-based feeds made available across the web. Thousands of sites (particularly news sites and blogs) publish their latest headlines in feeds, using a number of standardized XML-based formats. For more information, see the online handbook entry for <a href="@aggregator-module">Aggregator module</a>.',
     'context' => '',
@@ -1480,6 +1516,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Block the selected users', array(), array('context' => ''));
+  $translations['hu:default']['0a4a1fa34f31bbec7e8be11a399a1e0c'] = array(
+    'source' => 'Error, unset permission',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Hiba, nem beállított jogosultság',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Error, unset permission', array(), array('context' => ''));
   $translations['hu:default']['0a61142d2777ef45681c4487cb903955'] = array(
     'source' => 'No field is hidden.',
     'context' => '',
@@ -1687,6 +1732,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Allows users to log into your site using OpenID.', array(), array('context' => ''));
+  $translations['hu:default']['0b916fda952ecea5c1f5514c69150f09'] = array(
+    'source' => 'Request expires in',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felkérés lejár',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Request expires in', array(), array('context' => ''));
   $translations['hu:default']['0ba5d2e4212d1a7bacf4b42273907e0f'] = array(
     'source' => 'Page title @actual is not equal to @unexpected.',
     'context' => '',
@@ -1714,6 +1768,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Make it different from your username', array(), array('context' => ''));
+  $translations['hu:default']['0bc2b09c07005b410cae62912ae70206'] = array(
+    'source' => 'requester',
+    'context' => '',
+    'location' => '',
+    'translation' => 'felkérő',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('requester', array(), array('context' => ''));
   $translations['hu:default']['0bcef9c45bd8a48eda1b26eb0c61c869'] = array(
     'source' => '%',
     'context' => '',
@@ -1903,6 +1966,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Add vocabulary', array(), array('context' => ''));
+  $translations['hu:default']['0d3627289b893d3eea08e52589ed06ae'] = array(
+    'source' => 'Decline',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Elutasítás',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Decline', array(), array('context' => ''));
   $translations['hu:default']['0d514d2dbd4b1b8165f714d11e8319ad'] = array(
     'source' => 'Administrator role',
     'context' => '',
@@ -1993,6 +2065,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Your currently installed release has been revoked, and is no longer available for download. Disabling everything included in this release or upgrading is strongly recommended!', array(), array('context' => ''));
+  $translations['hu:default']['0db11153c500e499672d6ab679c14f03'] = array(
+    'source' => 'Your @rel_name request has been sent to !requestee.',
+    'context' => '',
+    'location' => '/relationship/15/request/1?destination=users',
+    'translation' => 'A felkérést elküldtük !requestee részére. Amennyiben jóváhagyja ismerősök lesztek!',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Your @rel_name request has been sent to !requestee.', array(), array('context' => ''));
   $translations['hu:default']['0db377921f4ce762c62526131097968f'] = array(
     'source' => 'General',
     'context' => '',
@@ -2479,6 +2560,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('OpenID', array(), array('context' => ''));
+  $translations['hu:default']['10e2ac77ea35a7d2d3911ab81252176d'] = array(
+    'source' => 'Requires Approval',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Elfogadás szükséges',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Requires Approval', array(), array('context' => ''));
   $translations['hu:default']['10e5d7a4ab78fa69fa1345c2bcd83f8d'] = array(
     'source' => 'Your signature will be publicly displayed at the end of your comments.',
     'context' => '',
@@ -2497,6 +2587,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Profile field %field added under category %category.', array(), array('context' => ''));
+  $translations['hu:default']['10ecf23742b71c099e8b9dbfa46cc608'] = array(
+    'source' => 'You must enter an existing relationship\'s name.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Egy létező kapcsolatnevet kell megadni.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('You must enter an existing relationship\'s name.', array(), array('context' => ''));
   $translations['hu:default']['10edcd7483325a00afb00ecf8cfb4946'] = array(
     'source' => '1 min',
     'context' => '',
@@ -2515,6 +2614,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('<strong>Start posting content</strong> Finally, you can <a href="@content">add new content</a> for your website.', array(), array('context' => ''));
+  $translations['hu:default']['111962a47b036761ba30c834f67731c0'] = array(
+    'source' => 'Singular or plural name of the relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolat egyes-, vagy többes számú neve',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Singular or plural name of the relationship', array(), array('context' => ''));
   $translations['hu:default']['111a2f5fb1c3c6e1c6feb642f558e79c'] = array(
     'source' => 'The PHP module has been disabled. Any existing content that was using the PHP filter will now be visible in plain text. This might pose a security risk by exposing sensitive information, if any, used in the PHP code.',
     'context' => '',
@@ -2686,6 +2794,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Welcome (no approval required)', array(), array('context' => ''));
+  $translations['hu:default']['11e8367ba14bd7fd8ffcc8f4f075fcd4'] = array(
+    'source' => 'This user does not exist.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felhasználó nem létezik.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('This user does not exist.', array(), array('context' => ''));
   $translations['hu:default']['11e898d73e6d2874ddb1af5e89cffd9b'] = array(
     'source' => 'You can visit the <a href="@poll">Polls</a> page to view all current polls, or alternately enable the <em>Most recent poll</em> block on the <a href="@blocks">Blocks administration page</a>. To vote in or view the results of a specific poll, you can click on the poll itself.',
     'context' => '',
@@ -2857,6 +2974,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Image style name', array(), array('context' => ''));
+  $translations['hu:default']['12dd8c2713d4c7d0589e5d47af823926'] = array(
+    'source' => 'Status link',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Állapot hivatkozás',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Status link', array(), array('context' => ''));
   $translations['hu:default']['12e67aac3e7f9227cc35f8f047d7dc74'] = array(
     'source' => 'Seven',
     'context' => '',
@@ -3316,6 +3442,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('The key is the stored value, and must be numeric. The label will be used in displayed values and edit forms.', array(), array('context' => ''));
+  $translations['hu:default']['15c2d85f1fae22a3c3a0594510a1f611'] = array(
+    'source' => 'Request',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felkérés',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Request', array(), array('context' => ''));
   $translations['hu:default']['15cbd40df48184df352030dba997e978'] = array(
     'source' => 'The name of the file on disk.',
     'context' => '',
@@ -3397,6 +3532,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Your settings have been saved.', array(), array('context' => ''));
+  $translations['hu:default']['16349a66291a087354de6e7926333e9f'] = array(
+    'source' => 'Mutual',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kölcsönös',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Mutual', array(), array('context' => ''));
   $translations['hu:default']['1634e66b522edaa910370cc5581a47f1'] = array(
     'source' => '1 month',
     'context' => '',
@@ -3901,6 +4045,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Option @option for field @id is selected.', array(), array('context' => ''));
+  $translations['hu:default']['19588c489fb81cc119c31fd96b809222'] = array(
+    'source' => 'Requires approval',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Elfogadás szükséges',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Requires approval', array(), array('context' => ''));
   $translations['hu:default']['195d18337bb3f231f2fafe8cf4369aba'] = array(
     'source' => 'Searching content and users',
     'context' => '',
@@ -4216,6 +4369,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('The human-readable name of the node type.', array(), array('context' => ''));
+  $translations['hu:default']['1bd2c4fc31e51af9a2c743a2cf24135e'] = array(
+    'source' => 'This relationship type does not exist.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolattípus nem létezik.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('This relationship type does not exist.', array(), array('context' => ''));
   $translations['hu:default']['1bda80f2be4d3658e0baa43fbe7ae8c1'] = array(
     'source' => 'view',
     'context' => '',
@@ -4675,6 +4837,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('E-mail', array(), array('context' => ''));
+  $translations['hu:default']['1e9c3801fe7a94fbcc54e5cacbe39f7d'] = array(
+    'source' => 'Become @name\'s @rel_name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Legyen @name felhasználó @rel_name',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Become @name\'s @rel_name', array(), array('context' => ''));
   $translations['hu:default']['1e9cf2475d489df6af5c0fe0d9881b61'] = array(
     'source' => 'Applying filters to text',
     'context' => '',
@@ -5040,6 +5211,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('The file is %filesize exceeding the maximum file size of %maxsize.', array(), array('context' => ''));
+  $translations['hu:default']['2029c90a49e8add716fcc3051a0c01ff'] = array(
+    'source' => 'Relationship Type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolat típusa',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship Type', array(), array('context' => ''));
   $translations['hu:default']['203b7c15804b1dba5e5e959d153b8027'] = array(
     'source' => 'The user who originally uploaded the file.',
     'context' => '',
@@ -5310,6 +5490,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Take the site offline for maintenance or bring it back online.', array(), array('context' => ''));
+  $translations['hu:default']['217a1d605e6707538902ff7a0368e90e'] = array(
+    'source' => 'Reciprocal',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Visszamutató',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Reciprocal', array(), array('context' => ''));
   $translations['hu:default']['217b4168969fa53f433f7f6da261a262'] = array(
     'source' => 'Update available',
     'context' => '',
@@ -5436,6 +5625,24 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Terms are displayed in ascending order by weight.', array(), array('context' => ''));
+  $translations['hu:default']['2228e7753431617c517a7caaa0194b62'] = array(
+    'source' => 'Relationship type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolattípus',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship type', array(), array('context' => ''));
+  $translations['hu:default']['222a267cc5778206b253be35ee3ddab5'] = array(
+    'source' => 'Current',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Jelenlegi',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Current', array(), array('context' => ''));
   $translations['hu:default']['222db8eca2136ab9b7df8199564e19d8'] = array(
     'source' => 'Edit current shortcut set',
     'context' => '',
@@ -5814,6 +6021,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('This will permanently remove the log messages from the database.', array(), array('context' => ''));
+  $translations['hu:default']['246a2fbab3d11cb3272e5f58099877e8'] = array(
+    'source' => 'Requester',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felkérő',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Requester', array(), array('context' => ''));
   $translations['hu:default']['247ee854750d73b1ac986d756367cd73'] = array(
     'source' => 'This is only used when the site is configured to use a separate administration theme on the <a href="@appearance-url">Appearance</a> page.',
     'context' => '',
@@ -5886,6 +6102,15 @@ function base_translations_hu_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Feed aggregator', array(), array('context' => ''));
+  $translations['hu:default']['25066736e95fedd707a978d556111369'] = array(
+    'source' => 'requestee',
+    'context' => '',
+    'location' => '',
+    'translation' => 'felkért',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('requestee', array(), array('context' => ''));
   $translations['hu:default']['254f642527b45bc260048e30704edb39'] = array(
     'source' => 'Configuration',
     'context' => '',
@@ -6318,6 +6543,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('Select any shortcut set', array(), array('context' => ''));
+  $translations['hu:default']['276e1e6aa26af8ea5f4f21cbdd4177ef'] = array(
+    'source' => 'Email message',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Email üzenet',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Email message', array(), array('context' => ''));
   $translations['hu:default']['27792947ed5d5da7c0d1f43327ed9dab'] = array(
     'source' => 'details',
     'context' => '',
@@ -6498,6 +6732,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('There is 1 item left to index.', array(), array('context' => ''));
+  $translations['hu:default']['28a96933fe0d8d4e5c17a1c872e06e15'] = array(
+    'source' => 'Become %name\'s @rel_name',
+    'context' => '',
+    'location' => '/',
+    'translation' => 'Jelölöm',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Become %name\'s @rel_name', array(), array('context' => ''));
   $translations['hu:default']['28aaafc355915903ce4a7e1d3af3bc4e'] = array(
     'source' => 'Bolivia',
     'context' => '',
@@ -6768,6 +7011,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('Limit allowed HTML tags', array(), array('context' => ''));
+  $translations['hu:default']['2a1a131906b52409f6e8edb7e06bc083'] = array(
+    'source' => 'Form Loading',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Ürlap betöltése',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Form Loading', array(), array('context' => ''));
   $translations['hu:default']['2a3005e7dcf5be98a1c14bb6a845a2ee'] = array(
     'source' => 'Basic page',
     'context' => '',
@@ -7236,6 +7488,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('Irish', array(), array('context' => ''));
+  $translations['hu:default']['2d13df6f8b5e4c5af9f87e0dc39df69d'] = array(
+    'source' => 'Pending',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Függőben',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Pending', array(), array('context' => ''));
   $translations['hu:default']['2d253152ad53c2a93629881bf0a06a34'] = array(
     'source' => 'manage fields',
     'context' => '',
@@ -7425,6 +7686,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('Reset date formats', array(), array('context' => ''));
+  $translations['hu:default']['2e979835dd62324f5bfe217449ba4974'] = array(
+    'source' => 'Strict',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Pontos',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Strict', array(), array('context' => ''));
   $translations['hu:default']['2ea1e525331ebc665d4de42d28b27750'] = array(
     'source' => 'Enabled, but database tables need conversion',
     'context' => '',
@@ -8847,6 +9117,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('Administer content and comments.', array(), array('context' => ''));
+  $translations['hu:default']['36e6e29930fb4b65383581b8255cb4bd'] = array(
+    'source' => '@username is a @rel_name of',
+    'context' => '',
+    'location' => '',
+    'translation' => '@username is a @rel_name of',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('@username is a @rel_name of', array(), array('context' => ''));
   $translations['hu:default']['36fbfc01d63e4b57d18991077535c6e0'] = array(
     'source' => 'This action cannot be undone.',
     'context' => '',
@@ -8991,6 +9270,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('If left empty, "0" will be used.', array(), array('context' => ''));
+  $translations['hu:default']['382ab522931673c11e398ead1b7b1678'] = array(
+    'source' => 'Accepted',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Elfogadott',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Accepted', array(), array('context' => ''));
   $translations['hu:default']['382b0f5185773fa0f67a8ed8056c7759'] = array(
     'source' => 'N/A',
     'context' => '',
@@ -9468,6 +9756,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('Add category', array(), array('context' => ''));
+  $translations['hu:default']['3ac340832f29c11538fbe2d6f75e8bcc'] = array(
+    'source' => 'update',
+    'context' => '',
+    'location' => '',
+    'translation' => 'frissítés',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('update', array(), array('context' => ''));
   $translations['hu:default']['3acbcd98559afc6be96edd706150e1dd'] = array(
     'source' => 'Confirm account cancellation',
     'context' => '',
@@ -10053,6 +10350,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('This project has been revoked, and is no longer available for download. Disabling everything included by this project is strongly recommended!', array(), array('context' => ''));
+  $translations['hu:default']['3e46230f145e7f85b697826f0b2545fb'] = array(
+    'source' => 'My Pending Relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Saját függő kapcsolatok',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('My Pending Relationships', array(), array('context' => ''));
   $translations['hu:default']['3e5ee828845e92e8893d983bccc2811f'] = array(
     'source' => 'Latest version:',
     'context' => '',
@@ -10647,6 +10953,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('forum container', array(), array('context' => ''));
+  $translations['hu:default']['41de6d6cfb8953c021bbe4ba0701c8a1'] = array(
+    'source' => 'Messages',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Üzeneteid',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Messages', array(), array('context' => ''));
   $translations['hu:default']['41dee5db354f983f51dcb87cd1086466'] = array(
     'source' => 'Enable <em>Alt</em> field',
     'context' => '',
@@ -10674,6 +10989,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('Stores field data in an SQL database.', array(), array('context' => ''));
+  $translations['hu:default']['41fa38d4d150a15c453a16d7baf41429'] = array(
+    'source' => 'Listings',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Listázások',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Listings', array(), array('context' => ''));
   $translations['hu:default']['41fda5c4c0c8ab326fb40375b76a4889'] = array(
     'source' => 'Top visitors in the past %interval',
     'context' => '',
@@ -10791,6 +11115,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('Database 4 byte UTF-8 support', array(), array('context' => ''));
+  $translations['hu:default']['4339507c357b1ec141e93af14c8516de'] = array(
+    'source' => 'Create relationship types',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolattípusok létrehozása',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Create relationship types', array(), array('context' => ''));
   $translations['hu:default']['434648c319599e8816f2178b7ea4ad22'] = array(
     'source' => 'Medium format',
     'context' => '',
@@ -10962,6 +11295,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('Planning fields', array(), array('context' => ''));
+  $translations['hu:default']['43f678d6fced16e3946608007d9b559a'] = array(
+    'source' => 'A user relationship has been disapproved',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felhasználó kapcsolata visszautasításra került',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('A user relationship has been disapproved', array(), array('context' => ''));
   $translations['hu:default']['43fe788c37692c2051a61180758e24a7'] = array(
     'source' => 'There are currently no styles. <a href="!url">Add a new one</a>.',
     'context' => '',
@@ -11007,6 +11349,15 @@ else {
     'plural' => 0,
   );
   $translatables[] = t('ok', array(), array('context' => ''));
+  $translations['hu:default']['4457d440870ad6d42bab9082d9bf9b61'] = array(
+    'source' => 'Fixed',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Rögzített',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Fixed', array(), array('context' => ''));
   $translations['hu:default']['4458de9b2e8d52d767ac1d392e411d87'] = array(
     'source' => 'Error checking available update data.',
     'context' => '',
@@ -11100,6 +11451,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Number of most recent views to display', array(), array('context' => ''));
+  $translations['hu:default']['44fdec47036f482b68b748f9d786801b'] = array(
+    'source' => 'days',
+    'context' => '',
+    'location' => '',
+    'translation' => 'nap',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('days', array(), array('context' => ''));
   $translations['hu:default']['45003637f463a781da4b8eb74c5b652c'] = array(
     'source' => 'URL language detection configuration',
     'context' => '',
@@ -11226,6 +11586,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('You can find <a href="@module_url">modules</a> and <a href="@theme_url">themes</a> on <a href="@drupal_org_url">drupal.org</a>. The following file extensions are supported: %extensions.', array(), array('context' => ''));
+  $translations['hu:default']['45848f124eec15c3fbb7be04851f7d3d'] = array(
+    'source' => 'Too many relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Túl sok kapcsolat',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Too many relationships', array(), array('context' => ''));
   $translations['hu:default']['4589d5ce7cea130d77c1bab647ffd459'] = array(
     'source' => 'Add field',
     'context' => '',
@@ -11280,6 +11649,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Toggle display', array(), array('context' => ''));
+  $translations['hu:default']['45af537b7701bb58fed9c3597f1e778d'] = array(
+    'source' => '@action',
+    'context' => '',
+    'location' => '',
+    'translation' => '@action',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('@action', array(), array('context' => ''));
   $translations['hu:default']['45afd6245d3c7423c52c3f3880dbf314'] = array(
     'source' => 'The requested page could not be found.',
     'context' => '',
@@ -12812,6 +13190,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('@title dialog', array(), array('context' => ''));
+  $translations['hu:default']['4df211924b23a31142bb7a6ac9a33832'] = array(
+    'source' => 'Oldest',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Legrégebbi',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Oldest', array(), array('context' => ''));
   $translations['hu:default']['4df71f30dd633e566ebbee8192bb3323'] = array(
     'source' => 'Operating in maintenance mode. <a href="@url">Go online.</a>',
     'context' => '',
@@ -12857,6 +13244,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Tuvalu', array(), array('context' => ''));
+  $translations['hu:default']['4e1aae2890c38ac499ab87001fd8517b'] = array(
+    'source' => 'AJAX Popup Positioning',
+    'context' => '',
+    'location' => '',
+    'translation' => 'AJAX felugró ablakok pozícionálása',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('AJAX Popup Positioning', array(), array('context' => ''));
   $translations['hu:default']['4e2555ff41f5401155474f3ca19e3db1'] = array(
     'source' => 'Throbber',
     'context' => '',
@@ -14009,6 +14405,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('A unique machine-readable name containing letters, numbers, and underscores.', array(), array('context' => ''));
+  $translations['hu:default']['54cef4b2bd21464df8e198ed7e8a7ccf'] = array(
+    'source' => 'Informational Messages',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Információs üzenetek',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Informational Messages', array(), array('context' => ''));
   $translations['hu:default']['54d47fdf39b19c825d3ca8cb8817b1a2'] = array(
     'source' => 'Preview full version',
     'context' => '',
@@ -14162,6 +14567,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Here you can find a short overview of your site\'s parameters as well as any problems detected with your installation. It may be useful to copy and paste this information into support requests filed on drupal.org\'s support forums and project issue queues.', array(), array('context' => ''));
+  $translations['hu:default']['55e7637bbd3664a7229881b34b5d2624'] = array(
+    'source' => 'Author Pane',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Szerzői tábla',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Author Pane', array(), array('context' => ''));
   $translations['hu:default']['55f8e7dee609dfed0746c268cc71f3c3'] = array(
     'source' => 'The file is %filesize which would exceed your disk quota of %quota.',
     'context' => '',
@@ -14450,6 +14864,24 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Algeria', array(), array('context' => ''));
+  $translations['hu:default']['575f5f86d2c7ea113c6710c1037c4465'] = array(
+    'source' => 'Saving...',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Mentés...',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Saving...', array(), array('context' => ''));
+  $translations['hu:default']['5776bf9a2cba464020d4a6c3007b8f4a'] = array(
+    'source' => 'My Relationships: All relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Saját kapcsolatok: Minden kapcsolat',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('My Relationships: All relationships', array(), array('context' => ''));
   $translations['hu:default']['5792315f09a5d54fb7e3d066672b507f'] = array(
     'source' => 'Tuesday',
     'context' => '',
@@ -14999,6 +15431,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('The Statistics module includes a counter for each page that increases whenever the page is viewed. To use the counter, enable <em>Count content views</em> on the <a href="@statistics-settings">statistics settings page</a>, and set the necessary <a href="@permissions">permissions</a> (<em>View content hits</em>) so that the counter is visible to the users.', array(), array('context' => ''));
+  $translations['hu:default']['5a3e7dc8103fa0b55f008f5fb0c3d59a'] = array(
+    'source' => 'Your relationships to this user',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolat ehhez a felhasználóhoz',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Your relationships to this user', array(), array('context' => ''));
   $translations['hu:default']['5a4f95bf31b0f820512139f27274e30e'] = array(
     'source' => 'URL path settings',
     'context' => '',
@@ -15080,6 +15521,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Are you sure you want to delete the vocabulary %title?', array(), array('context' => ''));
+  $translations['hu:default']['5b24822b9bfff8fbe18a4183f5ba30d1'] = array(
+    'source' => 'A user relationship has been removed',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felhasználó kapcsolata eltávolításra került',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('A user relationship has been removed', array(), array('context' => ''));
   $translations['hu:default']['5b469fd01889ec12f1e84c6e66829fc1'] = array(
     'source' => 'Above',
     'context' => '',
@@ -15260,6 +15710,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Revisions for %title', array(), array('context' => ''));
+  $translations['hu:default']['5c835c22429f25992b4371691ecde1a4'] = array(
+    'source' => 'Submitted',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Beküldött',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Submitted', array(), array('context' => ''));
   $translations['hu:default']['5ca48ada5cfb15b2b38593de524432b1'] = array(
     'source' => 'Convert URLs into links',
     'context' => '',
@@ -15431,6 +15890,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('more information', array(), array('context' => ''));
+  $translations['hu:default']['5dd075264239cff94f9a6dc304268aac'] = array(
+    'source' => 'No such relationship type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Nincs ilyen kapcsolattípus',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('No such relationship type', array(), array('context' => ''));
   $translations['hu:default']['5dd6278fdea1d1a53f162b209afd2ca2'] = array(
     'source' => 'Last post',
     'context' => '',
@@ -15692,6 +16160,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Dates', array(), array('context' => ''));
+  $translations['hu:default']['5f0fd8d9a7ef130f17a9ce44cd9e2d37'] = array(
+    'source' => 'User who initiated the request',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felhasználó, aki kezdeményezte a felkérést',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('User who initiated the request', array(), array('context' => ''));
   $translations['hu:default']['5f1037269dcc759d912c10fce31f1185'] = array(
     'source' => 'Unpublish content',
     'context' => '',
@@ -15863,6 +16340,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Deleted', array(), array('context' => ''));
+  $translations['hu:default']['5fe85f40ccd754697a7a1ef41b1df53b'] = array(
+    'source' => 'Error Messages',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Hibaüzenetek',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Error Messages', array(), array('context' => ''));
   $translations['hu:default']['5feb168ca8fb495dcc89b1208cdeb919'] = array(
     'source' => 'Russia',
     'context' => '',
@@ -16016,6 +16502,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('The menu link %title has been deleted.', array(), array('context' => ''));
+  $translations['hu:default']['6082e7a59a816d5bec6045a83c6bb8f8'] = array(
+    'source' => 'Elaborations',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kidolgozások',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Elaborations', array(), array('context' => ''));
   $translations['hu:default']['6082fb9f97ca37b28681c28dd9c8c47a'] = array(
     'source' => '<a href="@top-pages">Top pages</a> displays a list of pages ordered by how often they were viewed.',
     'context' => '',
@@ -16232,6 +16727,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Administrative overlay', array(), array('context' => ''));
+  $translations['hu:default']['616b5940be86c327aaa5090f50c061f5'] = array(
+    'source' => 'Declined',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Elutasítva',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Declined', array(), array('context' => ''));
   $translations['hu:default']['6176eb0305c3e599c4aa77304fd4bcf0'] = array(
     'source' => 'Moving forum topics',
     'context' => '',
@@ -16538,6 +17042,15 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plural' => 0,
   );
   $translatables[] = t('Bashkir', array(), array('context' => ''));
+  $translations['hu:default']['634f000a3366b6ef1a231d91b28817ca'] = array(
+    'source' => 'Elaboration',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kidolgozás',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Elaboration', array(), array('context' => ''));
   $translations['hu:default']['6356562253322f00ecc3e6cdef2ef489'] = array(
     'source' => 'Text formats',
     'context' => '',
@@ -16764,6 +17277,15 @@ username: [user:name]
 password: Your password
 
 --  [site:name] team', array(), array('context' => ''));
+  $translations['hu:default']['64663f4646781c9c0110838b905daa23'] = array(
+    'source' => 'Random',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Véletlenszerű',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Random', array(), array('context' => ''));
   $translations['hu:default']['646a11835f2fea7d72c777d16c298581'] = array(
     'source' => 'After this period, the poll will be closed automatically.',
     'context' => '',
@@ -17052,6 +17574,24 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Users with the <em>Administer menus and menu items</em> permission can add, edit and delete custom menus on the <a href="@menu">Menus administration page</a>. Custom menus can be special site menus, menus of external links, or any combination of internal and external links. You may create an unlimited number of additional menus, each of which will automatically have an associated block. By selecting <em>list links</em>, you can add, edit, or delete links for a given menu. The links listing page provides a drag-and-drop interface for controlling the order of links, and creating a hierarchy within the menu.', array(), array('context' => ''));
+  $translations['hu:default']['661841eec099d5338efbfc94d9f17510'] = array(
+    'source' => 'mutual',
+    'context' => '',
+    'location' => '',
+    'translation' => 'kölcsönös',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('mutual', array(), array('context' => ''));
+  $translations['hu:default']['662ab4a58064191f62a5b4bfa99968a6'] = array(
+    'source' => 'Delete default',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Alapértelmezés törlése',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Delete default', array(), array('context' => ''));
   $translations['hu:default']['662c15622f9c9c5decc0db80edb6c416'] = array(
     'source' => 'Dominican Republic',
     'context' => '',
@@ -17106,6 +17646,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('The number of replies a topic must have to be considered "hot".', array(), array('context' => ''));
+  $translations['hu:default']['6696206814291df5249ded26f383538f'] = array(
+    'source' => 'Singular/Plural',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Egyes / Többes szám',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Singular/Plural', array(), array('context' => ''));
   $translations['hu:default']['66aad674a23d7ae2d91c810b3834c6ea'] = array(
     'source' => 'Strong',
     'context' => 'Font weight',
@@ -17169,6 +17718,24 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Create new style', array(), array('context' => ''));
+  $translations['hu:default']['66e87a2d638d3c70adab2854483fe6b6'] = array(
+    'source' => 'User Relationships: Actions',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felhasználó kapcsolatai: műveletek',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('User Relationships: Actions', array(), array('context' => ''));
+  $translations['hu:default']['66f43b2d4502f36666ce7b70c3f55c42'] = array(
+    'source' => '%name has already been used.',
+    'context' => '',
+    'location' => '',
+    'translation' => '%name már használatban van.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('%name has already been used.', array(), array('context' => ''));
   $translations['hu:default']['66f59593f99b3bde78b5fc85c7214565'] = array(
     'source' => 'Check here if you want the theme to use the default shortcut icon.',
     'context' => '',
@@ -17376,6 +17943,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Enable multilingual support for this content type. If enabled, a language selection field will be added to the editing form, allowing you to select from one of the <a href="!languages">enabled languages</a>. If disabled, new posts are saved with the default language. Existing content will not be affected by changing this option.', array(), array('context' => ''));
+  $translations['hu:default']['67f115c1fddc4ce1aeb1c754001585bc'] = array(
+    'source' => 'Reverse',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Fordított',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Reverse', array(), array('context' => ''));
   $translations['hu:default']['67f26875da73f742a9ece16d1886bdf6'] = array(
     'source' => '<p>Add a custom block to your site, named "Welcome" . With its text format set to "PHP code" (or another format supporting PHP input), add the following in the Block body:</p>
 <pre>
@@ -17484,6 +18060,15 @@ print t(\'Welcome visitor! Thank you for visiting.\');
     'plural' => 0,
   );
   $translatables[] = t('Disabled theme', array(), array('context' => ''));
+  $translations['hu:default']['686be68e11d1247888e851725debb34d'] = array(
+    'source' => 'A user relationship has been approved',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felhasználó kapcsolata elfogadásra került',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('A user relationship has been approved', array(), array('context' => ''));
   $translations['hu:default']['686e697538050e4664636337cc3b834f'] = array(
     'source' => 'Create',
     'context' => '',
@@ -17538,6 +18123,15 @@ print t(\'Welcome visitor! Thank you for visiting.\');
     'plural' => 0,
   );
   $translatables[] = t('Existing system path', array(), array('context' => ''));
+  $translations['hu:default']['688dc1e570032c9b0f4adf1f40a746e0'] = array(
+    'source' => 'Existing request',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Létező felkérések',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Existing request', array(), array('context' => ''));
   $translations['hu:default']['6892cce7aa1d88fcc574b79c6b70aee5'] = array(
     'source' => 'Run cron every',
     'context' => '',
@@ -18384,6 +18978,15 @@ print t(\'Welcome visitor! Thank you for visiting.\');
     'plural' => 0,
   );
   $translatables[] = t('The URL of the site\'s login page.', array(), array('context' => ''));
+  $translations['hu:default']['6deec41a71365fa44b9786ef0fd94f4d'] = array(
+    'source' => 'User B',
+    'context' => '',
+    'location' => '',
+    'translation' => 'B felhasználó',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('User B', array(), array('context' => ''));
   $translations['hu:default']['6dffd5fb9a770d13340ad12e9155ae69'] = array(
     'source' => 'Only translated strings',
     'context' => '',
@@ -18420,6 +19023,15 @@ print t(\'Welcome visitor! Thank you for visiting.\');
     'plural' => 0,
   );
   $translatables[] = t('File %file (%realpath) could not be copied, because the destination %destination is invalid. This is often caused by improper use of file_copy() or a missing stream wrapper.', array(), array('context' => ''));
+  $translations['hu:default']['6e24fc91b6bae19ab3ce5a32f4a7bc05'] = array(
+    'source' => 'My relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Saját kapcsolatok',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('My relationships', array(), array('context' => ''));
   $translations['hu:default']['6e3e6ca9aff69b5aa0a08c568813a08f'] = array(
     'source' => 'More choices',
     'context' => '',
@@ -18681,6 +19293,15 @@ print t(\'Welcome visitor! Thank you for visiting.\');
     'plural' => 0,
   );
   $translatables[] = t('The value of this field is being determined by the %function function and may not be changed.', array(), array('context' => ''));
+  $translations['hu:default']['6f8063417ab31f38d864c28302f3de2f'] = array(
+    'source' => 'Approved',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Elfogadott',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Approved', array(), array('context' => ''));
   $translations['hu:default']['6f8522e0610541f1ef215a22ffa66ff6'] = array(
     'source' => 'Monday',
     'context' => '',
@@ -18906,6 +19527,15 @@ print t(\'Welcome visitor! Thank you for visiting.\');
     'plural' => 0,
   );
   $translatables[] = t('Member for', array(), array('context' => ''));
+  $translations['hu:default']['70b3fd5e04f92b01629a0bb351a4ed05'] = array(
+    'source' => 'Not accepting requests',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Nem elfogadott felkérések',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Not accepting requests', array(), array('context' => ''));
   $translations['hu:default']['70cb3fabadaf5d0f0f544b936ada4473'] = array(
     'source' => 'Tokens for comments posted on the site.',
     'context' => '',
@@ -19132,6 +19762,15 @@ A feltöltés méretét alapértelmezetten a PHP beállítások szabályozzák. 
     'plural' => 0,
   );
   $translatables[] = t('Leave shadow copy', array(), array('context' => ''));
+  $translations['hu:default']['724a5716c25bed55836bf7e6e9d11b9b'] = array(
+    'source' => 'Relationship type not allowed',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolattípus nem engedélyezett',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship type not allowed', array(), array('context' => ''));
   $translations['hu:default']['724bf4ca11a567636547a92a37e397b7'] = array(
     'source' => 'Yemen',
     'context' => '',
@@ -19483,6 +20122,15 @@ A feltöltés méretét alapértelmezetten a PHP beállítások szabályozzák. 
     'plural' => 0,
   );
   $translatables[] = t('Provide a password for the new account in both fields.', array(), array('context' => ''));
+  $translations['hu:default']['7492f7ce9bb9d96ae9b2d4bf86892948'] = array(
+    'source' => 'Save and translate',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Mentés és fordítás',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Save and translate', array(), array('context' => ''));
   $translations['hu:default']['7494d500ccb692bfde4eb96d2dd98cab'] = array(
     'source' => 'Unpublish selected content',
     'context' => '',
@@ -19708,6 +20356,15 @@ A feltöltés méretét alapértelmezetten a PHP beállítások szabályozzák. 
     'plural' => 0,
   );
   $translatables[] = t('Teaser', array(), array('context' => ''));
+  $translations['hu:default']['7670591dcc90d059eabf99ec712cfef4'] = array(
+    'source' => 'No Pending Requests',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Nincsenek függő felkérések',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('No Pending Requests', array(), array('context' => ''));
   $translations['hu:default']['769cd0c6c84f73a1c4c19ecaff518a53'] = array(
     'source' => 'If the amount of boxes above isn\'t enough, click here to add more choices.',
     'context' => '',
@@ -20006,6 +20663,15 @@ A kitiltott címekről egyáltalán nem érhető el a webhely, csak egy rövid s
     'plural' => 0,
   );
   $translatables[] = t('January', array(), array('context' => 'Long month name'));
+  $translations['hu:default']['787d5f05953ec39b108869dfdd7733e6'] = array(
+    'source' => 'approved',
+    'context' => '',
+    'location' => '',
+    'translation' => 'elfogadott',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('approved', array(), array('context' => ''));
   $translations['hu:default']['78805a221a988e79ef3f42d7c5bfd418'] = array(
     'source' => 'image',
     'context' => '',
@@ -20150,6 +20816,15 @@ A kitiltott címekről egyáltalán nem érhető el a webhely, csak egy rövid s
     'plural' => 0,
   );
   $translatables[] = t('Site-wide contact forms', array(), array('context' => ''));
+  $translations['hu:default']['796bfff058dbc581f65d4fbadfc61bce'] = array(
+    'source' => '@rel_plural_name',
+    'context' => '',
+    'location' => '',
+    'translation' => '@rel_plural_name',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('@rel_plural_name', array(), array('context' => ''));
   $translations['hu:default']['796c163589f295373e171842f37265d5'] = array(
     'source' => 'Wednesday',
     'context' => '',
@@ -20159,6 +20834,15 @@ A kitiltott címekről egyáltalán nem érhető el a webhely, csak egy rövid s
     'plural' => 0,
   );
   $translatables[] = t('Wednesday', array(), array('context' => ''));
+  $translations['hu:default']['79ad67e4bee6607aeabed157167b70d1'] = array(
+    'source' => 'Default Relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Alapértelmezés szerinti kapcsolatok',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Default Relationships', array(), array('context' => ''));
   $translations['hu:default']['79af01fea03930cc9911c26322a4ff86'] = array(
     'source' => 'The type of database your @drupal data will be stored in.',
     'context' => '',
@@ -20420,6 +21104,15 @@ A kitiltott címekről egyáltalán nem érhető el a webhely, csak egy rövid s
     'plural' => 0,
   );
   $translatables[] = t('When the site-wide contact form is enabled, a link in the main <em>Navigation</em> menu is created, but the link is disabled by default. This menu link can be enabled on the <a href=\'@menu\'>Menus administration page</a>.', array(), array('context' => ''));
+  $translations['hu:default']['7b323e5718e8c17a22539f8de7dcd32d'] = array(
+    'source' => 'Singular name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Egyes szám neve',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Singular name', array(), array('context' => ''));
   $translations['hu:default']['7b59a385670fd9cd194031c5b0514340'] = array(
     'source' => 'Kikuyu',
     'context' => '',
@@ -20630,6 +21323,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Date changed', array(), array('context' => ''));
+  $translations['hu:default']['7c6c2e5d48ab37a007cbf70d3ea25fa4'] = array(
+    'source' => 'pending',
+    'context' => '',
+    'location' => '',
+    'translation' => 'függőben',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('pending', array(), array('context' => ''));
   $translations['hu:default']['7c6f73d82bcf0df7f3b365d90276cc0e'] = array(
     'source' => 'The translation file %filename contains an error: "msgstr[]" is unexpected on line %line.',
     'context' => '',
@@ -21071,6 +21773,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Vote', array(), array('context' => ''));
+  $translations['hu:default']['7f46165474d11ee5836777d85df2cdab'] = array(
+    'source' => 'online',
+    'context' => '',
+    'location' => '',
+    'translation' => 'jelen van',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('online', array(), array('context' => ''));
   $translations['hu:default']['7f533fb9dbfdeb372755bcde781e4a8e'] = array(
     'source' => 'Initializing.',
     'context' => '',
@@ -21458,6 +22169,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Reference for usage, configuration, and modules.', array(), array('context' => ''));
+  $translations['hu:default']['80ab38b942fb2da88ca496f8bbe237f7'] = array(
+    'source' => 'Email subject',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Email tárgya',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Email subject', array(), array('context' => ''));
   $translations['hu:default']['80ebdccece38141cd9c0f9b3b623091f'] = array(
     'source' => 'Are you sure you want to delete this item?',
     'context' => '',
@@ -21467,6 +22187,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Are you sure you want to delete this item?', array(), array('context' => ''));
+  $translations['hu:default']['80f912621c9927c86e3e13abb50d908f'] = array(
+    'source' => 'An error has occurred. Please contact the site administrator.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Hiba történt. Fel kell venni a kapcsolatot az oldal üzemeltetőjével.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('An error has occurred. Please contact the site administrator.', array(), array('context' => ''));
   $translations['hu:default']['80fc2e8cef61458b2f99a02d7b159471'] = array(
     'source' => 'To make your password stronger:',
     'context' => '',
@@ -21512,6 +22241,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('The Search module includes a default <em>Search form</em> block, which can be enabled and configured on the <a href="@blocks">Blocks administration page</a>. The block is available to users with the <em>Search content</em> permission.', array(), array('context' => ''));
+  $translations['hu:default']['8156ea1ea9ab16e5970a2c769800ace8'] = array(
+    'source' => 'Add @rel_name',
+    'context' => '',
+    'location' => '',
+    'translation' => '@rel_name hozzáadása',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Add @rel_name', array(), array('context' => ''));
   $translations['hu:default']['816667a2fb049f8788d7058d81c09f9d'] = array(
     'source' => 'Site name',
     'context' => '',
@@ -21674,6 +22412,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Create and edit URL aliases', array(), array('context' => ''));
+  $translations['hu:default']['830be0d662ae10c0fb2268529a39fa03'] = array(
+    'source' => 'Relationship type not set',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolat típusa nincs megadva',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship type not set', array(), array('context' => ''));
   $translations['hu:default']['831013c9b953496705f4818e1f5df2cd'] = array(
     'source' => 'Be aware that the ability to embed PHP code within content is provided by the PHP Filter module. If this module is disabled or deleted, then blocks and posts with embedded PHP may display, rather than execute, the PHP code.',
     'context' => '',
@@ -21845,6 +22592,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Published comments', array(), array('context' => ''));
+  $translations['hu:default']['83ac7c5b411d9ae32be39ebdf08d928d'] = array(
+    'source' => 'You must enter an existing user\'s name.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Egy létező felhasználónevet kell megadni.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('You must enter an existing user\'s name.', array(), array('context' => ''));
   $translations['hu:default']['83ad5fa0e16091a48e2787409576de6a'] = array(
     'source' => '<em>sub-term</em>: Hard rock',
     'context' => '',
@@ -22034,6 +22790,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Forum topics submitted by users (for example, <em>How to start a Drupal 6 Multisite</em>), which start discussions and are starting points for:', array(), array('context' => ''));
+  $translations['hu:default']['84957cae1715584712c4e842880c8e08'] = array(
+    'source' => 'User relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felhasználói kapcsolat',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('User relationship', array(), array('context' => ''));
   $translations['hu:default']['84a9c1b566fb350f0734936a3e73300e'] = array(
     'source' => 'Link with label %label found.',
     'context' => '',
@@ -22094,6 +22859,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('%type settings', array(), array('context' => ''));
+  $translations['hu:default']['84e24a8205d144118b79b97cfd8a2e94'] = array(
+    'source' => 'No relationships available.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Nincs elérhető kapcsolat.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('No relationships available.', array(), array('context' => ''));
   $translations['hu:default']['84e3c5d90e397b7f325dc53676bbaf60'] = array(
     'source' => 'Learn how to install Drupal in other languages',
     'context' => '',
@@ -22283,6 +23057,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('This login can be used only once.', array(), array('context' => ''));
+  $translations['hu:default']['861d08731f7cbad22fe28a75d750eae8'] = array(
+    'source' => 'Remove @rel_name',
+    'context' => '',
+    'location' => '',
+    'translation' => '@rel_name eltávolítása',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Remove @rel_name', array(), array('context' => ''));
   $translations['hu:default']['861eef123aa5d2fd9398b089facb5e65'] = array(
     'source' => 'Saved %label configuration.',
     'context' => '',
@@ -22598,6 +23381,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('See the <a href="@languages">Languages page</a> for more information on adding support for additional languages.', array(), array('context' => ''));
+  $translations['hu:default']['87af833cd343de78fa907750c6be0a65'] = array(
+    'source' => 'A user relationship has been requested',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felhasználónál kapcsolati felkérés történt',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('A user relationship has been requested', array(), array('context' => ''));
   $translations['hu:default']['87bff7993d9515ca9536e1a51fc681b7'] = array(
     'source' => 'Add a new file',
     'context' => '',
@@ -22679,6 +23471,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('%name has been deleted.', array(), array('context' => ''));
+  $translations['hu:default']['881d2461e5406a204f989d6fe69e3a0d'] = array(
+    'source' => 'First User',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Első felhasználó',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('First User', array(), array('context' => ''));
   $translations['hu:default']['883a65e472d41658cda8999e04adb5ab'] = array(
     'source' => 'The feed %feed has been added.',
     'context' => '',
@@ -22706,6 +23507,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Add new field: you need to select a field type.', array(), array('context' => ''));
+  $translations['hu:default']['886b5d1739a7469817e9645081e672a0'] = array(
+    'source' => 'Relationships per page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolatok oldalanként',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationships per page', array(), array('context' => ''));
   $translations['hu:default']['887e4fb532c51ed42f7dcbb2e8b85af4'] = array(
     'source' => 'Custom display settings',
     'context' => '',
@@ -23255,6 +24065,24 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Checking for available updates', array(), array('context' => ''));
+  $translations['hu:default']['8beef3abd59141b3ed80093f853a7726'] = array(
+    'source' => 'RTID',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolattípus azonosító',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('RTID', array(), array('context' => ''));
+  $translations['hu:default']['8bfabd360f33fac0271511dbf7bb678b'] = array(
+    'source' => 'Relationship Types',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolattípusok',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship Types', array(), array('context' => ''));
   $translations['hu:default']['8bfc6153fffed40cae88fa85247fb98a'] = array(
     'source' => 'Database log cleared.',
     'context' => '',
@@ -24614,6 +25442,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Settings for logging and alerts modules. Various modules can route Drupal\'s system events to different destinations, such as syslog, database, email, etc.', array(), array('context' => ''));
+  $translations['hu:default']['936a6e08b7505196df729a441fedff46'] = array(
+    'source' => '@rel_name to !username (!controls)',
+    'context' => '',
+    'location' => '',
+    'translation' => '@rel_name !username felhasználóval (!controls)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('@rel_name to !username (!controls)', array(), array('context' => ''));
   $translations['hu:default']['937504f318f04eaf0f1d701df4c4d7f3'] = array(
     'source' => 'Decimal',
     'context' => '',
@@ -24632,6 +25469,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Parent terms', array(), array('context' => ''));
+  $translations['hu:default']['938002f4dbf412958799b44bc2695808'] = array(
+    'source' => 'Mouse cursor',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Egérkurzor',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Mouse cursor', array(), array('context' => ''));
   $translations['hu:default']['938007c0650547a704b38c9fc7636659'] = array(
     'source' => 'The Profile module allows site administrators to define custom fields (such as country, full name, or age) for user profiles, which are then displayed in the <a href="@user">My Account</a> section. This permits users of a site to share more information about themselves, and can help community-based sites organize users around specific information. For more information, see the online handbook entry for <a href="@profile">Profile module</a>.',
     'context' => '',
@@ -24686,6 +25532,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('The @drupal installer requires that the %default-file file not be modified in any way from the original download.', array(), array('context' => ''));
+  $translations['hu:default']['93f07b720ebf7d1246512569761a5804'] = array(
+    'source' => 'Removed',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Eltávolított',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Removed', array(), array('context' => ''));
   $translations['hu:default']['93f1a9319fb88fe64db38a632e6c4046'] = array(
     'source' => 'Powered by <a href="@poweredby">Drupal</a>',
     'context' => '',
@@ -25469,6 +26324,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('A user-defined date format. See the <a href="@url">PHP manual</a> for available options.', array(), array('context' => ''));
+  $translations['hu:default']['98b75d2158cfb5d23329b3d8df3e59ac'] = array(
+    'source' => 'not online',
+    'context' => '',
+    'location' => '',
+    'translation' => 'nincs jelen',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('not online', array(), array('context' => ''));
   $translations['hu:default']['98bcb812114c343a58a43174d1a9f17f'] = array(
     'source' => 'Portuguese, Portugal',
     'context' => '',
@@ -25595,6 +26459,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Account details for [user:name] at [site:name] (pending admin approval)', array(), array('context' => ''));
+  $translations['hu:default']['99c71cdb771aed11076deb453137812a'] = array(
+    'source' => 'Is the logged in user',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A bejelentkezett felhasználó',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Is the logged in user', array(), array('context' => ''));
   $translations['hu:default']['99cddf5518b88eec88e57c8b24661ea6'] = array(
     'source' => 'Editing @shortcut',
     'context' => '',
@@ -25658,6 +26531,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Attempt to create field name %name which already exists, although it is inactive.', array(), array('context' => ''));
+  $translations['hu:default']['99ffe35d4f661650022ff61c3fc39679'] = array(
+    'source' => 'Branding',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Márkázás',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Branding', array(), array('context' => ''));
   $translations['hu:default']['9a0364b9e99bb480dd25e1f0284c8555'] = array(
     'source' => 'content',
     'context' => '',
@@ -25667,6 +26549,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('content', array(), array('context' => ''));
+  $translations['hu:default']['9a1bfa2b5c53316c4d7fa4c5c8fbbe80'] = array(
+    'source' => 'Non-existent user',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Nem létező felhasználó',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Non-existent user', array(), array('context' => ''));
   $translations['hu:default']['9a2096747410d4c478c4a5272c39dfbb'] = array(
     'source' => 'Put each item on a separate line or separate them by commas. No HTML allowed.',
     'context' => '',
@@ -25901,6 +26792,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Are you sure you want to rebuild the permissions on site content?', array(), array('context' => ''));
+  $translations['hu:default']['9b600732118ea5875872a28690353cf0'] = array(
+    'source' => 'User relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felhasználói kapcsolatok',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('User relationships', array(), array('context' => ''));
   $translations['hu:default']['9b607b56ed71b0a70ab2dc060cf23e6e'] = array(
     'source' => 'HTTP response not expected !code, actual !curl_code',
     'context' => '',
@@ -26810,6 +27710,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Executes a piece of PHP code. The usage of this filter should be restricted to administrators only!', array(), array('context' => ''));
+  $translations['hu:default']['a149379a245724717c7701e406ce056c'] = array(
+    'source' => 'Relationship requests',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolati felkérések',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship requests', array(), array('context' => ''));
   $translations['hu:default']['a168be1500b7c6dc79548dd259bec4ec'] = array(
     'source' => 'Unknown release date',
     'context' => '',
@@ -26954,6 +27863,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Type', array(), array('context' => ''));
+  $translations['hu:default']['a20c26482bb94713b8a9d8397892ceed'] = array(
+    'source' => 'Add relationship type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolattípus hozzáadása',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Add relationship type', array(), array('context' => ''));
   $translations['hu:default']['a21e97c9c5faf0af08a6c0802788fdeb'] = array(
     'source' => 'Saved comment %title',
     'context' => '',
@@ -27035,6 +27953,15 @@ Your account on [site:name] has been canceled.
     'plural' => 0,
   );
   $translatables[] = t('Create new books', array(), array('context' => ''));
+  $translations['hu:default']['a29a15d47271225c6dcecde71811c492'] = array(
+    'source' => 'Self request',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Önfelkérés',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Self request', array(), array('context' => ''));
   $translations['hu:default']['a2b577306d058a7254891c7f03852d85'] = array(
     'source' => 'Overview of fields on all entity types.',
     'context' => '',
@@ -27368,6 +28295,15 @@ This link expires in one day and nothing will happen if it is not used.
     'plural' => 0,
   );
   $translatables[] = t('System', array(), array('context' => ''));
+  $translations['hu:default']['a465b4aa31e0005307877f1c13ce5444'] = array(
+    'source' => '@username\'s relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => '@username kapcsolatai',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('@username\'s relationships', array(), array('context' => ''));
   $translations['hu:default']['a46dc12acc65aa9729edad6c678bfbb7'] = array(
     'source' => 'Error sending e-mail (from %from to %to).',
     'context' => '',
@@ -27431,6 +28367,15 @@ This link expires in one day and nothing will happen if it is not used.
     'plural' => 0,
   );
   $translatables[] = t('Top left', array(), array('context' => ''));
+  $translations['hu:default']['a4d3b161ce1309df1c4e25df28694b7b'] = array(
+    'source' => 'Submit',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Beküldés',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Submit', array(), array('context' => ''));
   $translations['hu:default']['a4d91b47690288cca6e8f19e45f0d3f4'] = array(
     'source' => 'Uninstall @module module',
     'context' => '',
@@ -27440,6 +28385,15 @@ This link expires in one day and nothing will happen if it is not used.
     'plural' => 0,
   );
   $translatables[] = t('Uninstall @module module', array(), array('context' => ''));
+  $translations['hu:default']['a4f537100009b13e822a1254601530d8'] = array(
+    'source' => 'Are you sure you want to send a new @rel_name request to !name?',
+    'context' => '',
+    'location' => '/relationship/15/request/1?destination=users',
+    'translation' => 'Biztos vagy benne, hogy szeretnél üzenetet küldeni !name részére, hogy az ismerősöd legyen?',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Are you sure you want to send a new @rel_name request to !name?', array(), array('context' => ''));
   $translations['hu:default']['a4faaa363da8e0341fbd8d06fa9ce80e'] = array(
     'source' => 'What the field will be called',
     'context' => '',
@@ -27761,6 +28715,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('The username contains an illegal character.', array(), array('context' => ''));
+  $translations['hu:default']['a6d08a285e2226640e2f97d313105175'] = array(
+    'source' => 'Relationship status',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolat állapota',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship status', array(), array('context' => ''));
   $translations['hu:default']['a6d3bea3fa66775952e080b90bb0c4f1'] = array(
     'source' => 'Mozambique',
     'context' => '',
@@ -28049,6 +29012,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('The content will be unpublished if it contains any of the phrases above. Use a case-sensitive, comma-separated list of phrases. Example: funny, bungee jumping, "Company, Inc."', array(), array('context' => ''));
+  $translations['hu:default']['a8b8dfa62ba70c113ee194612e88846a'] = array(
+    'source' => 'Request relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolati felkérés',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Request relationship', array(), array('context' => ''));
   $translations['hu:default']['a8c7038b5929874834517ed03227cc5e'] = array(
     'source' => 'Installing @drupal',
     'context' => '',
@@ -28166,6 +29138,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Clear all caches', array(), array('context' => ''));
+  $translations['hu:default']['a9ce1ed14c0a3f8b432c7f6c1942a1fe'] = array(
+    'source' => 'Inquiring users',
+    'context' => '',
+    'location' => '/admin/structure/views/view/users/edit/panel_pane_2?render=overlay&render=overlay',
+    'translation' => 'Ők szeretnének megismerni téged!',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Inquiring users', array(), array('context' => ''));
   $translations['hu:default']['a9d09355260c5e6866cebb8ab206f15f'] = array(
     'source' => 'Bihari',
     'context' => '',
@@ -28616,6 +29597,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('South Ndebele', array(), array('context' => ''));
+  $translations['hu:default']['ab81ac367163710c3abe1914b948f107'] = array(
+    'source' => 'User Relationships: All relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felhasználó kapcsolatai: összes kapcsolat',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('User Relationships: All relationships', array(), array('context' => ''));
   $translations['hu:default']['ab8626cf574e98511cdf91867612c88a'] = array(
     'source' => 'Page bottom',
     'context' => '',
@@ -28706,6 +29696,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('The user account %name cannot be cancelled.', array(), array('context' => ''));
+  $translations['hu:default']['ac5bb077c33753116b5e91ff1766e7bc'] = array(
+    'source' => 'Received',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapott',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Received', array(), array('context' => ''));
   $translations['hu:default']['ac616f844b9a5ea5a827bf7fb99b1ad5'] = array(
     'source' => 'Fri',
     'context' => '',
@@ -28724,6 +29723,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Path', array(), array('context' => ''));
+  $translations['hu:default']['ac71d8452c267207bcf9f1c93c6419e8'] = array(
+    'source' => 'Newest',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Legújabb',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Newest', array(), array('context' => ''));
   $translations['hu:default']['ac73d897c0dcb3d9e4000d6cd6f27520'] = array(
     'source' => 'Managing attachment display',
     'context' => '',
@@ -28922,6 +29930,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('The content access permissions have been rebuilt.', array(), array('context' => ''));
+  $translations['hu:default']['ad921d60486366258809553a3db49a4a'] = array(
+    'source' => 'unknown',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ismeretlen',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('unknown', array(), array('context' => ''));
   $translations['hu:default']['ad9b952f61318bf164932116f4486bfb'] = array(
     'source' => '%email is not a valid e-mail address.',
     'context' => '',
@@ -29222,6 +30239,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('view actual size', array(), array('context' => ''));
+  $translations['hu:default']['aecda51252575e5a010e518c3346ec88'] = array(
+    'source' => 'Approve relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolat elfogadása',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Approve relationship', array(), array('context' => ''));
   $translations['hu:default']['aed0e51d4909fff30b9be08f2ad053f6'] = array(
     'source' => 'Administer site configuration',
     'context' => '',
@@ -29240,6 +30266,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Installation was completed successfully.', array(), array('context' => ''));
+  $translations['hu:default']['aee9784c03b80d38d3271cde2b252b8d'] = array(
+    'source' => 'Unknown error',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Ismeretlen hiba',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Unknown error', array(), array('context' => ''));
   $translations['hu:default']['aef38381ce7290cc62fd00b98618ee5d'] = array(
     'source' => 'Consider increasing your PHP memory limit to %memory_minimum_limit to help prevent errors in the installation process.',
     'context' => '',
@@ -29519,6 +30554,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('The Search module provides the ability to index and search for content by exact keywords, and for users by username or e-mail. For more information, see the online handbook entry for <a href="@search-module">Search module</a>.', array(), array('context' => ''));
+  $translations['hu:default']['b027a5e694ad4bd1534760d25d6282f5'] = array(
+    'source' => 'Requestee',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felkért',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Requestee', array(), array('context' => ''));
   $translations['hu:default']['b040a46e9ddef55cf4eb1b8a767847dc'] = array(
     'source' => 'Node module element',
     'context' => '',
@@ -29762,6 +30806,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('‹ ', array(), array('context' => ''));
+  $translations['hu:default']['b17186562cbdb922f49e9371c4641d8b'] = array(
+    'source' => 'Non-existent type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Nem létező típus',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Non-existent type', array(), array('context' => ''));
   $translations['hu:default']['b1748df090fe2f6a22e0b68db85fcf76'] = array(
     'source' => 'Blog entry',
     'context' => '',
@@ -29819,7 +30872,7 @@ password: Your password
   $translations['hu:default']['b1c94ca2fbc3e78fc30069c8d0f01680'] = array(
     'source' => 'All',
     'context' => '',
-    'location' => '; sites/all/modules/contrib/module_filter/js/module_filter_tab.js',
+    'location' => '',
     'translation' => 'Mind',
     'plid' => 0,
     'plural' => 0,
@@ -30194,6 +31247,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Cron run completed.', array(), array('context' => ''));
+  $translations['hu:default']['b3b60b7a5e7f9977461d42a94bf2c761'] = array(
+    'source' => 'Created date',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Létrehozás dátuma',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Created date', array(), array('context' => ''));
   $translations['hu:default']['b3c49006521ba240c4cb28b40a6ee1fe'] = array(
     'source' => 'Your version of Drupal has been revoked and is no longer available for download. Upgrading is strongly recommended!',
     'context' => '',
@@ -30374,6 +31436,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('%sender-name (@sender-from) sent %recipient-name an e-mail.', array(), array('context' => ''));
+  $translations['hu:default']['b547c7bf1e6cefda6c3c2c5949191ed6'] = array(
+    'source' => 'Create a relationship with %name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolat létrehozása %name felhasználóval',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Create a relationship with %name', array(), array('context' => ''));
   $translations['hu:default']['b54d58d7e43c404563f91e38d3efbcac'] = array(
     'source' => 'Abbreviation',
     'context' => '',
@@ -31094,6 +32165,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Unknown field: @field_name', array(), array('context' => ''));
+  $translations['hu:default']['b8a8de691ac66213d1a0947ee339d8fd'] = array(
+    'source' => 'Number of relationships to display in block',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A blokkban megjelenő kapcsolatok száma',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Number of relationships to display in block', array(), array('context' => ''));
   $translations['hu:default']['b8acf8279ddfb8f95d3f8dc0317c55fe'] = array(
     'source' => 'E-mail addresses to notify when updates are available',
     'context' => '',
@@ -31436,6 +32516,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('If the PHP option is chosen, enter PHP code between %php. Note that executing incorrect PHP code can break your Drupal site.', array(), array('context' => ''));
+  $translations['hu:default']['ba42dd4cad9f1916a6cd37fd07c33aa3'] = array(
+    'source' => 'Not Approved',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Nem elfogadott',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Not Approved', array(), array('context' => ''));
   $translations['hu:default']['ba463eaa77b2339ec21950a1cd11f2c2'] = array(
     'source' => 'New user: %name (%email).',
     'context' => '',
@@ -31580,6 +32669,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('No', array(), array('context' => ''));
+  $translations['hu:default']['bb17508d7b1a23534d71d211b21f88a3'] = array(
+    'source' => '@rel_name of',
+    'context' => '',
+    'location' => '',
+    'translation' => '@rel_name',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('@rel_name of', array(), array('context' => ''));
   $translations['hu:default']['bb422b07fc52402a66e61a74cebe776e'] = array(
     'source' => 'View visitors that hit many pages.',
     'context' => '',
@@ -31805,6 +32903,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('This URL is not valid.', array(), array('context' => ''));
+  $translations['hu:default']['bc2f276c3d2e940e03e0d6cb1a05da6d'] = array(
+    'source' => 'Relationship actions',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolat akciók',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship actions', array(), array('context' => ''));
   $translations['hu:default']['bc3c16dd37d61ad309ee28131ceb637f'] = array(
     'source' => 'View this feed\'s recent news.',
     'context' => '',
@@ -32498,6 +33605,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Add existing field: invalid widget.', array(), array('context' => ''));
+  $translations['hu:default']['bfb0b81f2772c33f339a1dd58d466609'] = array(
+    'source' => 'Name of the relationship (plural)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolat neve (többes szám)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Name of the relationship (plural)', array(), array('context' => ''));
   $translations['hu:default']['bfb2a8c4475171494f78f159bd0fcc6f'] = array(
     'source' => 'Update manager',
     'context' => '',
@@ -32570,6 +33686,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('A forum topic (and all of its comments) may be moved between forums by selecting a different forum while editing a forum topic. When moving a forum topic between forums, the <em>Leave shadow copy</em> option creates a link in the original forum pointing to the new location.', array(), array('context' => ''));
+  $translations['hu:default']['c029ecb9a4a7a17842675747964132f6'] = array(
+    'source' => 'Existing relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Létező kapcsolat',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Existing relationship', array(), array('context' => ''));
   $translations['hu:default']['c02e270ff8d267bc33a1700fad57037d'] = array(
     'source' => 'The callback URL is not local and not trusted: !url',
     'context' => '',
@@ -32966,6 +34091,24 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Each <a href=\'@content-type\'>content type</a> can have its own default comment settings configured as: <em>Open</em> to allow new comments, <em>Hidden</em> to hide existing comments and prevent new comments, or <em>Closed</em> to view existing comments, but prevent new comments. These defaults will apply to all new content created (changes to the settings on existing content must be done manually). Other comment settings can also be customized per content type, and can be overridden for any given item of content. When a comment has no replies, it remains editable by its author, as long as the author has a user account and is logged in.', array(), array('context' => ''));
+  $translations['hu:default']['c28d6d4409f06914e34b543144cb9f03'] = array(
+    'source' => 'Updated date',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Frissítési dátum',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Updated date', array(), array('context' => ''));
+  $translations['hu:default']['c29835dc8480f33d9fd5f9afd6da8c8e'] = array(
+    'source' => 'Send @op messages',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Küldött @op üzenetek',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Send @op messages', array(), array('context' => ''));
   $translations['hu:default']['c2a3a8651dc0f07724033ad9dbd51089'] = array(
     'source' => 'Check for updates of disabled and uninstalled modules and themes',
     'context' => '',
@@ -33398,6 +34541,24 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('New Zealand', array(), array('context' => ''));
+  $translations['hu:default']['c52e15c44f6372c6ddb2758254a041ef'] = array(
+    'source' => 'Delete type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Típus törlése',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Delete type', array(), array('context' => ''));
+  $translations['hu:default']['c53125909a3f86ceff5c0ff761560539'] = array(
+    'source' => 'u_relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'u_relationship',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('u_relationship', array(), array('context' => ''));
   $translations['hu:default']['c555b579aa262e92dbdf0fed7f7638ee'] = array(
     'source' => 'Igbo',
     'context' => '',
@@ -34316,6 +35477,15 @@ password: Your password
     'plural' => 0,
   );
   $translatables[] = t('Comment approved.', array(), array('context' => ''));
+  $translations['hu:default']['cb51178d5432944bbaaf432561f4277a'] = array(
+    'source' => 'one way',
+    'context' => '',
+    'location' => '',
+    'translation' => 'egyirányú',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('one way', array(), array('context' => ''));
   $translations['hu:default']['cb5480c32e71778852b08ae1e8712775'] = array(
     'source' => 'Spanish',
     'context' => '',
@@ -34546,6 +35716,15 @@ This link can only be used once to log in and will lead you to a page where you 
     'plural' => 0,
   );
   $translatables[] = t('The category %category has been deleted.', array(), array('context' => ''));
+  $translations['hu:default']['ccad5508846f7886b9fbcdbe2ed121e9'] = array(
+    'source' => 'Requestee user',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felkért felhasználó',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Requestee user', array(), array('context' => ''));
   $translations['hu:default']['ccb4721c6d7babbc745df0299595ff4b'] = array(
     'source' => 'The image is too small; the minimum dimensions are %dimensions pixels.',
     'context' => '',
@@ -34645,6 +35824,15 @@ This link can only be used once to log in and will lead you to a page where you 
     'plural' => 0,
   );
   $translatables[] = t('%field: There should only be one decimal separator (@separator).', array(), array('context' => ''));
+  $translations['hu:default']['cdaea47b3d80300e07c0a0c1a6d35f0d'] = array(
+    'source' => 'No relationships found',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Nem található kapcsolat',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('No relationships found', array(), array('context' => ''));
   $translations['hu:default']['cdb6b114b4ae7ee36bb8c2a1902eb778'] = array(
     'source' => 'The name of the feed (or the name of the website providing the feed).',
     'context' => '',
@@ -35509,6 +36697,15 @@ This link can only be used once to log in and will lead you to a page where you 
     'plural' => 0,
   );
   $translatables[] = t('Preview comment', array(), array('context' => ''));
+  $translations['hu:default']['d2b874ec847b84d8366ee636603feb7a'] = array(
+    'source' => 'User A',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felhasználó',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('User A', array(), array('context' => ''));
   $translations['hu:default']['d2cd937e4d587af834992b39b1ede337'] = array(
     'source' => 'Menu links with smaller weights are displayed before links with larger weights.',
     'context' => '',
@@ -35545,6 +36742,15 @@ This link can only be used once to log in and will lead you to a page where you 
     'plural' => 0,
   );
   $translatables[] = t('Seychelles', array(), array('context' => ''));
+  $translations['hu:default']['d30fd576bd308f6facc9343ebd031b8e'] = array(
+    'source' => 'Expiration',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Lejárat',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Expiration', array(), array('context' => ''));
   $translations['hu:default']['d339db285029fc29615191c491309b26'] = array(
     'source' => 'The @module module is missing, so the following module will be disabled: @depends.',
     'context' => '',
@@ -35761,6 +36967,15 @@ This link can only be used once to log in and will lead you to a page where you 
     'plural' => 0,
   );
   $translatables[] = t('Maintaining translations', array(), array('context' => ''));
+  $translations['hu:default']['d40df08757f27a23e46b747aaf136ef4'] = array(
+    'source' => '!requester has requested to be your %relationship_name.  Please view your !pending_relationship_requests to approve them.',
+    'context' => '',
+    'location' => '',
+    'translation' => '!requester felkérése, mint %relationship_name. A jóváhagyáshoz ide kell kattintani: !pending_relationship_requests.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('!requester has requested to be your %relationship_name.  Please view your !pending_relationship_requests to approve them.', array(), array('context' => ''));
   $translations['hu:default']['d415c1077bfc54418cf9ec959b3fbd8c'] = array(
     'source' => 'Database updates',
     'context' => '',
@@ -35869,6 +37084,15 @@ This link can only be used once to log in and will lead you to a page where you 
     'plural' => 0,
   );
   $translatables[] = t('No forums defined', array(), array('context' => ''));
+  $translations['hu:default']['d4dae4d2b06be1a0a4f3a960fdcc6804'] = array(
+    'source' => 'Type ID of the relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolat típusának azonosítója',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Type ID of the relationship', array(), array('context' => ''));
   $translations['hu:default']['d4dccb8ca2dac4e53c01bd9954755332'] = array(
     'source' => 'Save settings',
     'context' => '',
@@ -36271,6 +37495,15 @@ Thank you for registering at [site:name]. Your application for an account is cur
     'plural' => 0,
   );
   $translatables[] = t('Filter', array(), array('context' => ''));
+  $translations['hu:default']['d78618bba2a6b261e7525a0464664ecc'] = array(
+    'source' => 'Remove relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolat eltávolítása',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Remove relationship', array(), array('context' => ''));
   $translations['hu:default']['d78f4ea925455169977030535bff5fe4'] = array(
     'source' => 'Your account will be removed and all account information deleted. All of your content will also be deleted.',
     'context' => '',
@@ -37219,6 +38452,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Configure display format strings for date and time.', array(), array('context' => ''));
+  $translations['hu:default']['ddcf50c29294d4414f3f7c1bbc892cb5'] = array(
+    'source' => 'Resources',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Erőforrások',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Resources', array(), array('context' => ''));
   $translations['hu:default']['ddea507cd2f9a578b9fb0ce1719d85af'] = array(
     'source' => 'Increment a counter each time content is viewed.',
     'context' => '',
@@ -37246,6 +38488,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Pink Plastic', array(), array('context' => ''));
+  $translations['hu:default']['de17beb8d5974f77a86d58718c164a99'] = array(
+    'source' => 'Users you interested in',
+    'context' => '',
+    'location' => '/admin/structure/views/view/users/edit/panel_pane_2?render=overlay&render=overlay',
+    'translation' => 'Nekik küldtél meghívót, egyelőre nem hagyták jóvá',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Users you interested in', array(), array('context' => ''));
   $translations['hu:default']['de48fee9c7511bf7158b1e28b3d0baec'] = array(
     'source' => 'Niue',
     'context' => '',
@@ -37471,6 +38722,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Full comment', array(), array('context' => ''));
+  $translations['hu:default']['dfd9cc26bd9f072dda9a28b31478bf97'] = array(
+    'source' => 'Second User',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Második felhasználó',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Second User', array(), array('context' => ''));
   $translations['hu:default']['dfe3c96c700763cd2870916c1552240f'] = array(
     'source' => 'Updated vocabulary %name.',
     'context' => '',
@@ -37660,6 +38920,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('The translation file %filename contains an error: there is an unexpected string on line %line.', array(), array('context' => ''));
+  $translations['hu:default']['e140fdf7c4ac78292742f882ce153f7d'] = array(
+    'source' => 'Cancel relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolat megszakítása',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Cancel relationship', array(), array('context' => ''));
   $translations['hu:default']['e195779be732cded4286c656df652b22'] = array(
     'source' => 'Deleted custom menu %title and all its menu links.',
     'context' => '',
@@ -37723,6 +38992,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Today\'s:', array(), array('context' => ''));
+  $translations['hu:default']['e1d82fc673654948184d89f5f5176349'] = array(
+    'source' => 'Received requests',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Érkezett felkérések',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Received requests', array(), array('context' => ''));
   $translations['hu:default']['e1e28709ab80bb364fbc4c6c950471fa'] = array(
     'source' => 'Trimmed',
     'context' => '',
@@ -38146,6 +39424,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Trigger: !description', array(), array('context' => ''));
+  $translations['hu:default']['e45496714ead9913b807ed18574334b7'] = array(
+    'source' => 'No default relationships available.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Nincs elérhető alapértelmezés szerinti kapcsolat.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('No default relationships available.', array(), array('context' => ''));
   $translations['hu:default']['e45a2f2179debd15bed3263e29a5b143'] = array(
     'source' => 'Feed %feed deleted.',
     'context' => '',
@@ -38263,6 +39550,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Sa', array(), array('context' => ''));
+  $translations['hu:default']['e562711a559b65ffd1bafc8448ad9dc1'] = array(
+    'source' => 'Sent requests',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Küldött felkérések',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Sent requests', array(), array('context' => ''));
   $translations['hu:default']['e5862ef79b8cedaa499a984b301df4bc'] = array(
     'source' => 'The Locale module allows your Drupal site to be presented in languages other than the default English, and to be multilingual. The Locale module works by maintaining a database of translations, and examining text as it is about to be displayed. When a translation of the text is available in the language to be displayed, the translation is displayed rather than the original text. When a translation is unavailable, the original text is displayed, and then stored for review by a translator. For more information, see the online handbook entry for <a href="@locale">Locale module</a>.',
     'context' => '',
@@ -38317,6 +39613,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Bar with progress meter', array(), array('context' => ''));
+  $translations['hu:default']['e5c8c65d947a3756587696b6b245e9c4'] = array(
+    'source' => 'User whose relationship is requested',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felhasználó, akit a kapcsolatra felkértek',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('User whose relationship is requested', array(), array('context' => ''));
   $translations['hu:default']['e5c99198a6a6ca2672253976fe7ec097'] = array(
     'source' => 'Define how to decide which language is used to display page elements (primarily text provided by Drupal and modules, such as field labels and help text). This decision is made by evaluating a series of detection methods for languages; the first detection method that gets a result will determine which language is used for that type of text. Define the order of evaluation of language detection methods on this page.',
     'context' => '',
@@ -38461,6 +39766,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Your PHP configuration only supports a single database type, so it has been automatically selected.', array(), array('context' => ''));
+  $translations['hu:default']['e695af8b638bdbfcedc5d44ef6eb323f'] = array(
+    'source' => '@rel_name from !username (!controls)',
+    'context' => '',
+    'location' => '',
+    'translation' => '@rel_name !username felhasználótól (!controls)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('@rel_name from !username (!controls)', array(), array('context' => ''));
   $translations['hu:default']['e6a192326713391621f6f583ebd56f23'] = array(
     'source' => 'Cancelling user account',
     'context' => '',
@@ -38542,6 +39856,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Cannot add field @table.@field: field already exists.', array(), array('context' => ''));
+  $translations['hu:default']['e6ddc2f5960e15086688036a3a0834bb'] = array(
+    'source' => 'Please choose the type of relationship.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolat típusának kiválasztása.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Please choose the type of relationship.', array(), array('context' => ''));
   $translations['hu:default']['e6f2a16ba44d4d33396eb41220c04015'] = array(
     'source' => 'Put site into maintenance mode',
     'context' => '',
@@ -39127,6 +40450,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('last »', array(), array('context' => ''));
+  $translations['hu:default']['ea96be9e75d8d3d690aedae5040edf2f'] = array(
+    'source' => 'Relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolatok',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationships', array(), array('context' => ''));
   $translations['hu:default']['ea9b38251139e683ba13803403b26cdc'] = array(
     'source' => 'Threading',
     'context' => '',
@@ -39145,6 +40477,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('The name used to indicate anonymous users.', array(), array('context' => ''));
+  $translations['hu:default']['ead6fd80a74a4fd2e21e415da0df001b'] = array(
+    'source' => 'Type of the relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolat típusa',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Type of the relationship', array(), array('context' => ''));
   $translations['hu:default']['eada819634d0164c6a7547bdcc405033'] = array(
     'source' => 'Georgia',
     'context' => '',
@@ -40333,6 +41674,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Contextual links are supplied by modules, to give you quick access to tasks associated with regions of pages on your site. For instance, if you have a custom menu block displayed in a sidebar of your site, the Blocks and Menus modules will supply links to configure the block and edit the menu. The Contextual links module collects these links into a list for display by your theme, and also adds JavaScript code to the page to hide the links initially, and display them when your mouse hovers over the block.', array(), array('context' => ''));
+  $translations['hu:default']['f231e14df43401ef4d2f609f20e61bbf'] = array(
+    'source' => 'Which relationships should be displayed',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Melyik kapcsolat jelenjen meg',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Which relationships should be displayed', array(), array('context' => ''));
   $translations['hu:default']['f23b8b7e705f96a3219783440e6b3f8e'] = array(
     'source' => 'United States Minor Outlying Islands',
     'context' => '',
@@ -40738,6 +42088,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('For more information see W3C\'s <a href="@html-specifications">HTML Specifications</a> or use your favorite search engine to find other sites that explain HTML.', array(), array('context' => ''));
+  $translations['hu:default']['f489357f54c3fe33fb8dfb0a67acbb82'] = array(
+    'source' => 'A user relationship has been cancelled',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A felhasználó kapcsolata megszakításra került',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('A user relationship has been cancelled', array(), array('context' => ''));
   $translations['hu:default']['f49ba7b018febd4bc72a06850ca830e9'] = array(
     'source' => 'No custom date formats available. <a href="@link">Add date format</a>.',
     'context' => '',
@@ -41089,6 +42448,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('The test run did not successfully finish.', array(), array('context' => ''));
+  $translations['hu:default']['f72a333b1719b05804d7b1bc4e327a83'] = array(
+    'source' => 'Relationship has type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolat típusa',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship has type', array(), array('context' => ''));
   $translations['hu:default']['f72c915d8f575a5c0999b5f37b6d99b7'] = array(
     'source' => 'Su',
     'context' => '',
@@ -41260,6 +42628,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('The date the user last logged in to the site.', array(), array('context' => ''));
+  $translations['hu:default']['f8694756c58e8568f339765d3c6ec1eb'] = array(
+    'source' => 'Remove @name from @rel_plural_name',
+    'context' => '',
+    'location' => '',
+    'translation' => '@name eltávolítása innen: @rel_plural_name',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Remove @name from @rel_plural_name', array(), array('context' => ''));
   $translations['hu:default']['f86c96231db1f1bfbdf88933f9a458d7'] = array(
     'source' => 'Display on user registration form.',
     'context' => '',
@@ -41395,6 +42772,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Allow comment title', array(), array('context' => ''));
+  $translations['hu:default']['f95e3c89cbf5e1f988a0d92c38e402e0'] = array(
+    'source' => 'I am a @rel_name of',
+    'context' => '',
+    'location' => '',
+    'translation' => '„@rel_name” kapcsolat a felhasználóval:',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('I am a @rel_name of', array(), array('context' => ''));
   $translations['hu:default']['f970c28118bd5f03cc0725e9283cfb5a'] = array(
     'source' => 'Image style: @style',
     'context' => '',
@@ -41431,6 +42817,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Users', array(), array('context' => ''));
+  $translations['hu:default']['f9ae5e5c44e59f94680af569879f704a'] = array(
+    'source' => 'Everyone',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Mindenki',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Everyone', array(), array('context' => ''));
   $translations['hu:default']['f9b5a275bc456b62ad13e4a537f62a3b'] = array(
     'source' => 'Malayalam',
     'context' => '',
@@ -41728,6 +43123,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Tokens related to uploaded files.', array(), array('context' => ''));
+  $translations['hu:default']['fbc97786af4bf30dc5b07809a950792c'] = array(
+    'source' => 'Relationship',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Kapcsolat',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Relationship', array(), array('context' => ''));
   $translations['hu:default']['fbfdd2df47bd24b07249584ab3b919dc'] = array(
     'source' => 'The settings file is writable.',
     'context' => '',
@@ -41782,6 +43186,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('If an existing translation package does not meet your needs, the Gettext Portable Object (<em>.po</em>) files within a package may be modified, or new <em>.po</em> files may be created, using a desktop Gettext editor. The Locale module\'s <a href=\'@import\'>import</a> feature allows the translated strings from a new or modified <em>.po</em> file to be added to your site. The Locale module\'s <a href=\'@export\'>export</a> feature generates files from your site\'s translated strings, that can either be shared with others or edited offline by a Gettext translation editor.', array(), array('context' => ''));
+  $translations['hu:default']['fc2e1190f35f3c735fe7057dd8aca495'] = array(
+    'source' => 'User Relationships',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felhasználói kapcsolatok',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('User Relationships', array(), array('context' => ''));
   $translations['hu:default']['fc4220395d8cd56e75edad530c1a6671'] = array(
     'source' => 'Pictures larger than this will be scaled down to this size.',
     'context' => '',
@@ -41827,6 +43240,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Kongo', array(), array('context' => ''));
+  $translations['hu:default']['fcdf8a82eba24e303b63b2e49a507ecb'] = array(
+    'source' => 'Requested',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Igényelt',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Requested', array(), array('context' => ''));
   $translations['hu:default']['fceb5af40df295d85851f390f4f8d78d'] = array(
     'source' => 'Gabon',
     'context' => '',
@@ -41845,6 +43267,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Only JPEG, PNG and GIF images are allowed.', array(), array('context' => ''));
+  $translations['hu:default']['fcf4725892a1666b75ec8c2a53786442'] = array(
+    'source' => 'Requester user',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Felkérő felhasználó',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Requester user', array(), array('context' => ''));
   $translations['hu:default']['fd029a6a4c3ed793c147748313079163'] = array(
     'source' => 'Files must be less than !size.',
     'context' => '',
@@ -42106,6 +43537,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Are you sure you want to cancel the account %name?', array(), array('context' => ''));
+  $translations['hu:default']['fe5f0e0c28784045a2c14d8c9a692725'] = array(
+    'source' => 'The relationship object',
+    'context' => '',
+    'location' => '',
+    'translation' => 'A kapcsolat objektum',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('The relationship object', array(), array('context' => ''));
   $translations['hu:default']['fe6c675ebd148eacbce8fb7ca28d823c'] = array(
     'source' => 'Menu links that are not enabled will not be listed in any menu.',
     'context' => '',
@@ -42178,6 +43618,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('Swiss German', array(), array('context' => ''));
+  $translations['hu:default']['fec1d443581b3aba458a4b5d18a779d2'] = array(
+    'source' => 'currently logged in user',
+    'context' => '',
+    'location' => '',
+    'translation' => 'jelenleg bejelentkezett felhasználó',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('currently logged in user', array(), array('context' => ''));
   $translations['hu:default']['fed1f418528984cf72c64c0091434562'] = array(
     'source' => 'All newer versions',
     'context' => '',
@@ -42286,6 +43735,15 @@ Your account on [site:name] has been blocked.
     'plural' => 0,
   );
   $translatables[] = t('The specified name is already in use.', array(), array('context' => ''));
+  $translations['hu:default']['ff45303b01a8d999549c0ab33b7fa87c'] = array(
+    'source' => 'pending relationship requests',
+    'context' => '',
+    'location' => '',
+    'translation' => 'függő kapcsolati felkérések',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('pending relationship requests', array(), array('context' => ''));
   $translations['hu:default']['ff4d605eb763695d6e0227d88d073061'] = array(
     'source' => 'Drupal can make a block with the most recent news items of a feed. You can <a href="@block-admin">configure blocks</a> to be displayed in the sidebar of your page. This setting lets you configure the number of news items to show in a feed\'s block. If you choose \'0\' these feeds\' blocks will be disabled.',
     'context' => '',
