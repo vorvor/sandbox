@@ -416,11 +416,20 @@ form#privatemsg-new .form-actions #edit-cancel {
 }
 
 .view-user-posts #comments .field-name-comment-body {
-  border-bottom: 1px solid #fff;
+  background: #fff;
+  padding: 8px;
+}
+
+.view-user-posts #comments form .field-name-comment-body {
+  background: none;
 }
 
 .view-user-posts #comments header {
   font-size: 0.8em;
+}
+
+.view-user-posts #comments a.username {
+  color: #fff;
 }
 
 .view-user-posts #comments .comment__form-title,
