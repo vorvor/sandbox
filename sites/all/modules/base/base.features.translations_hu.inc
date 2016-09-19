@@ -15380,7 +15380,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['hu:default']['59d6b45df54049c82f46b307e3cab6c5'] = array(
     'source' => 'Don\'t display post information',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/content_types.js',
     'translation' => 'Ne jelenítse meg a beküldési információt',
     'plid' => 0,
     'plural' => 0,
@@ -22433,7 +22433,7 @@ Your account on [site:name] has been canceled.
   $translations['hu:default']['831561a9b272302a40363bb814003118'] = array(
     'source' => 'Requires a title',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/content_types.js',
     'translation' => 'Szükséges egy cím',
     'plid' => 0,
     'plural' => 0,
@@ -30872,7 +30872,7 @@ password: Your password
   $translations['hu:default']['b1c94ca2fbc3e78fc30069c8d0f01680'] = array(
     'source' => 'All',
     'context' => '',
-    'location' => '',
+    'location' => '; sites/all/modules/contrib/module_filter/js/module_filter_tab.js',
     'translation' => 'Mind',
     'plid' => 0,
     'plural' => 0,
@@ -32447,7 +32447,7 @@ password: Your password
   $translations['hu:default']['b9f5c797ebbf55adccdd8539a65a0241'] = array(
     'source' => 'Disabled',
     'context' => '',
-    'location' => '',
+    'location' => '; sites/all/modules/contrib/auto_nodetitle/auto_nodetitle.js',
     'translation' => 'Tiltott',
     'plid' => 0,
     'plural' => 0,
@@ -37033,7 +37033,7 @@ This link can only be used once to log in and will lead you to a page where you 
   $translations['hu:default']['d470b5cb00092952c8de5c17e7531b8c'] = array(
     'source' => 'Not published',
     'context' => '',
-    'location' => '; modules/node/node.js',
+    'location' => '; modules/node/node.js; modules/node/content_types.js',
     'translation' => 'Rejtett',
     'plid' => 0,
     'plural' => 0,

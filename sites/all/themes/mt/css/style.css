@@ -95,8 +95,11 @@ body {
 {
   float: left;
   clear: none;
-  background-color: #7E8F7C;
+  background-color: #D4562C;
   width: 47%;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 
@@ -247,7 +250,6 @@ form#privatemsg-new .form-actions #edit-cancel {
 
 .view-greeting
 {
-  background-color: #7E8F7C;
   color: #fff;
   background-image: url(../img/wink.png);
   background-repeat: no-repeat;
@@ -620,9 +622,9 @@ form#privatemsg-new .form-actions #edit-cancel {
 
 .browse,
 .view-display-id-panel_pane_1 .views-field-ur-action a,
-.view-display-id-panel_pane_2 .views-field-nothing a,
-.view-display-id-panel_pane_3 .views-field-nothing a,
-.view-display-id-panel_pane_4 .views-field-nothing a
+.view-display-id-panel_pane_2 .views-field-ur-action a,
+.view-display-id-panel_pane_3 .views-field-ur-action a,
+.view-display-id-panel_pane_4 .views-field-ur-action a
 {
   text-align: center;
   -webkit-appearance: none;
@@ -655,7 +657,7 @@ form#privatemsg-new .form-actions #edit-cancel {
 .view-display-id-panel_pane_3 .views-field-ur-action,
 .view-display-id-panel_pane_4 .views-field-ur-action
 {
-  display: none;
+  d isplay: none;
 }
 
 .browse:hover,

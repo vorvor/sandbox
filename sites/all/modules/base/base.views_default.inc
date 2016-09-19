@@ -185,6 +185,70 @@ function base_views_default_views() {
   $export['decide_admin'] = $view;
 
   $view = new view();
+  $view->name = 'decide_menu';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'taxonomy_term_data';
+  $view->human_name = 'Decide menu';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Decide menu';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Alaphelyzet';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Mező: Taxonómia kifejezés: Kifejezésazonosító */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  /* Mező: Taxonómia kifejezés: Név */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'decide/[tid]';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  /* Filter criterion: Taxonómiaszótár: Programok által használt név */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'decide' => 'decide',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $translatables['decide_menu'] = array(
+    t('Master'),
+    t('Decide menu'),
+    t('more'),
+    t('Apply'),
+    t('Alaphelyzet'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Kifejezésazonosító'),
+    t('.'),
+    t(','),
+    t('Block'),
+  );
+  $export['decide_menu'] = $view;
+
+  $view = new view();
   $view->name = 'greeting';
   $view->description = '';
   $view->tag = 'default';
@@ -802,6 +866,7 @@ function base_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Új tagok';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access user profiles';
@@ -1052,15 +1117,6 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid_1']['link_to_user'] = FALSE;
-  /* Mező: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Mégsem';
-  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['nothing']['alter']['path'] = 'user/[uid_1]/relationships/requested/[uid]/cancel';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Felhasználó: Aktív */
@@ -1159,15 +1215,6 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid_1']['link_to_user'] = FALSE;
-  /* Mező: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Jóváhagyom';
-  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['nothing']['alter']['path'] = 'user/[uid_1]/relationships/requested/[uid]/approve';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Felhasználó: Aktív */
@@ -1263,15 +1310,6 @@ function base_views_default_views() {
   $handler->display->display_options['fields']['uid_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['uid_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid_1']['link_to_user'] = FALSE;
-  /* Mező: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Dobom';
-  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['nothing']['alter']['path'] = 'user/[uid_1]/relationships/[uid]/remove';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Felhasználó: Aktív */
@@ -1323,10 +1361,8 @@ function base_views_default_views() {
     t('felkérő'),
     t('Inquiring users'),
     t('Ők szeretnének megismerni téged!'),
-    t('Jóváhagyom'),
     t('Partners'),
     t('Ismerősök'),
-    t('Dobom'),
   );
   $export['users'] = $view;
 
