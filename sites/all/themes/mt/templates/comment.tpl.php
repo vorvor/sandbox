@@ -49,6 +49,14 @@
   <?php endif; ?>
 
   <?php
+  $users = views_get_view_result('comment_like_count', 'block_1', $comment->cid);
+  $names = [];
+  foreach ($users as $user) {
+    $names[] = $user->users_flagging_name;
+  }
+  if (count($names) > 0) {
+    print implode(',', $names) . ' ' . t('also liked it!');
+  }
   unset($content['links']['comment']['#links']['comment-reply']);
   print render($content['links']) ?>
 </article>
