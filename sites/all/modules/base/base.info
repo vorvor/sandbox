@@ -97,6 +97,7 @@ features[variable][] = node_options_post
 features[variable][] = node_preview_post
 features[variable][] = node_submitted_post
 features[views_view][] = comment
+features[views_view][] = comment_like_count
 features[views_view][] = decide_admin
 features[views_view][] = decide_menu
 features[views_view][] = greeting
