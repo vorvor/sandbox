@@ -48,15 +48,23 @@
     </footer>
   <?php endif; ?>
 
+
+
   <?php
+  unset($content['links']['comment']['#links']['comment-reply']);
+  $content['links']['flag']['#attributes']['class'][] = 'comment-like';
+  print render($content['links']) ?>
+
+  <?php
+  // ------- render user list who liked
   $users = views_get_view_result('comment_like_count', 'block_1', $comment->cid);
   $names = [];
   foreach ($users as $user) {
     $names[] = $user->users_flagging_name;
   }
   if (count($names) > 0) {
-    print implode(',', $names) . ' ' . t('also liked it!');
+    print '<div class="comment-like-users">' . implode(',', $names) . ' ' . t('also liked it!') . '</div>';
   }
-  unset($content['links']['comment']['#links']['comment-reply']);
-  print render($content['links']) ?>
+  // ------- render user list who liked
+  ?>
 </article>

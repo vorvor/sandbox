@@ -404,8 +404,29 @@ form#privatemsg-new .form-actions #edit-cancel {
   line-height: 1em;
 }
 
+.view-user-posts .comment {
+  margin-bottom: 20px;
+}
 
+.view-user-posts .comment ul.links {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
 
+.view-user-posts .comment ul.links li {
+  padding: 0;
+}
+
+.view-user-posts .comment ul.links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.view-user-posts .comment .comment-like-users {
+  float: left;
+  margin-left: 30px;
+}
 
 
 
@@ -487,9 +508,11 @@ form#privatemsg-new .form-actions #edit-cancel {
 
 
 
-.views-field-userlike
+.views-field-userlike,
+.comment-like-users
 {
   font-size: 0.8em;
+  color: #fff;
 }
 
 .view-user-posts .views-field-ur-action .rs-link
@@ -705,5 +728,4 @@ form#privatemsg-new .form-actions #edit-cancel {
 .decide-option:nth-child(1) {
   margin-right: 20px;
 }
-
 
