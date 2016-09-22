@@ -25,6 +25,14 @@
     <script src="<?php print $base_path . $path_to_zen; ?>/js/html5shiv.min.js"></script>
     <![endif]-->
   <?php endif; ?>
+  <script type="text/javascript">
+    window.smartlook||(function(d) {
+      var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+      var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+      c.charset='utf-8';c.src='//rec.getsmartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '4ef42aabefa9a32166d6b279c4112033cca7e7e6');
+  </script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php if ($skip_link_text && $skip_link_anchor): ?>
