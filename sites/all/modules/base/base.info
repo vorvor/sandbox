@@ -76,7 +76,6 @@ features[image][] = mini-box
 features[language][] = en
 features[language][] = hu
 features[menu_custom][] = main-menu
-features[menu_links][] = main-menu_backlog:backlog
 features[menu_links][] = main-menu_dashboard:dashboard
 features[menu_links][] = main-menu_feed:feed
 features[menu_links][] = main-menu_home:<front>
