@@ -311,3 +311,122 @@ function motor_messages($uid) {
   $result = $query->execute()->fetchAssoc();
 
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function motor_form_alter(&$form, &$form_state, $form_id) {
+  $ur_action_type = arg(5);
+  if ($form_id == 'comment_node_post_form') {
+    $form['#submit'][] = 'motor_backlog_save_comment_submit';
+  }
+
+  if ($form_id == 'user_relationships_ui_request') {
+    $form['#submit'][] = 'motor_backlog_save_user_request_submit';
+  }
+
+  if ($form_id == 'user_relationships_ui_pending_requested') {
+    if ($ur_action_type == 'disapprove') {
+      $form['#submit'][] = 'motor_backlog_save_user_disapprove_request_submit';
+    }
+    else {
+      $form['#submit'][] = 'motor_backlog_save_user_approve_request_submit';
+    }
+  }
+
+  if ($form_id == 'user_relationships_ui_remove') {
+    $form['#submit'][] = 'motor_backlog_save_user_remove_request_submit';
+  }
+
+}
+
+
+function motor_backlog_save_comment_submit($form, &$form_state) {
+  global $user;
+  $fields = [];
+  $cid = $form_state['values']['cid'];
+  $field['title'] = 'post commented';
+  $field['body'] = array('value' => $form_state['values']['comment_body'][LANGUAGE_NONE][0]['value']);
+  $field['field_user_act'] = $user->uid;
+  $comment = comment_load($cid);
+  $node = node_load($comment->nid);
+  $field['field_user_pass'] = $node->uid;
+  $field['field_comment_ref'] = $cid;
+  _motor_create_node($field);
+}
+
+function motor_backlog_save_user_request_submit($form, &$form_state) {
+  global $user;
+  $fields = [];
+  $field['title'] = 'request sent';
+  $field['field_user_act'] = $form_state['values']['requester'];
+  $field['field_user_pass'] = $form_state['values']['requestee'];
+  _motor_create_node($field);
+}
+
+function motor_backlog_save_user_approve_request_submit($form, &$form_state) {
+  global $user;
+  $fields = [];
+  $ur = user_relationships_load($form_state['values']['rid']);
+  $field['title'] = 'request approved';
+  $field['field_user_act'] = $ur->requestee_id;
+  $field['field_user_pass'] = $ur->requester_id;
+  _motor_create_node($field);
+}
+
+function motor_backlog_save_user_disapprove_request_submit($form, &$form_state) {
+  global $user;
+  $fields = [];
+  $ur = user_relationships_load($form_state['values']['rid']);
+  $field['title'] = 'request disapproved';
+  $field['field_user_act'] = $ur->requestee_id;
+  $field['field_user_pass'] = $ur->requester_id;
+  _motor_create_node($field);
+}
+
+function motor_backlog_save_user_remove_request_submit($form, &$form_state) {
+  global $user;
+  $fields = [];
+  $ur = user_relationships_load($form_state['values']['rid']);
+  $field['title'] = 'remove request';
+  $field['field_user_act'] = $ur->requestee_id;
+  $field['field_user_pass'] = $ur->requester_id;
+  _motor_create_node($field);
+}
+
+
+function _motor_create_node($fields, $type = 'backlog', $title = 'default_title', $save = TRUE) {
+  global $user;
+
+  $values = array(
+    'type' => $type,
+    'uid' => $user->uid,
+    'status' => 1,
+    'comment' => 0,
+    'promote' => 0,
+  );
+  $entity = entity_create('node', $values);
+
+  $ewrapper = entity_metadata_wrapper('node', $entity);
+  $ewrapper->language->set('en');
+
+  $ewrapper->revision->set(1);
+
+  foreach ($fields as $key => $value) {
+    $ewrapper->$key->set($value);
+  }
+
+  // Now just save the wrapper and the entity
+  // There is some suggestion that the 'true' argument is necessary to
+  // the entity save method to circumvent a bug in Entity API. If there is
+  // such a bug, it almost certainly will get fixed, so make sure to check.
+  if ($save) {
+    $ewrapper->save();
+    return $entity;
+  }
+  else {
+    return $ewrapper;
+  }
+}
+
+

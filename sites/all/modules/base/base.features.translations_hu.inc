@@ -7536,7 +7536,7 @@ else {
   $translations['hu:default']['2d7884afd43376e978fe74f07020b16a'] = array(
     'source' => 'Deselect all rows in this table',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/tableselect.js',
     'translation' => 'A kiválasztás megszüntetése a táblázat minden sorában',
     'plid' => 0,
     'plural' => 0,
@@ -40759,7 +40759,7 @@ Your account on [site:name] has been blocked.
   $translations['hu:default']['ec5af4f3335a73c9891ec9a7211127aa'] = array(
     'source' => 'Select all rows in this table',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/tableselect.js',
     'translation' => 'A táblázat minden sorának kiválasztása',
     'plid' => 0,
     'plural' => 0,

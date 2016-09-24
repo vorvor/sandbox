@@ -61,11 +61,11 @@ function base_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'base',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Like comment".
   $flags['like_comment'] = array(
@@ -92,11 +92,11 @@ function base_flag_default_flags() {
     'show_on_form' => 0,
     'access_author' => '',
     'show_contextual_link' => 0,
-    'api_version' => 3,
     'module' => 'base',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 
@@ -171,6 +171,14 @@ function base_image_default_styles() {
  */
 function base_node_info() {
   $items = array(
+    'backlog' => array(
+      'name' => t('Backlog'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'post' => array(
       'name' => t('Post'),
       'base' => 'node_content',
