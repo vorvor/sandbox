@@ -7,4 +7,5 @@ interface translation project = FALSE
 
 ;files[] =
 files[] = views/handlers/motor_handler_userlike.inc
-;dependencies[] = 
+files[] = js/motor.js
+;dependencies[] =

@@ -38,8 +38,45 @@
         });
 
       });
-      //code ends
 
+      $('body').prepend('<div id="modal-fade"><div id="modal"></div></div>');
+
+      $('#modal-fade').css({
+        "width":"100%",
+        "height":"100%",
+        "background":"rgba(0,0,0,0.8)",
+        "position":"fixed",
+        "z-index":"100",
+        "display":"none"
+
+      });
+
+      $('#modal').css({
+        "position":"fixed",
+        "width":"70%",
+        "height":"80%",
+        "margin":"10% 20%",
+        "background":"red",
+        "z-index":"101",
+        "padding":"10px",
+      });
+
+      $('.rs-start a').click(function(e) {
+        e.preventDefault();
+        $('#modal-fade').show();
+
+        $.ajax({
+          url: $(this).attr('href'),
+          success: function(data) {
+            var html = $('<div>').append($(data).find('form.confirmation').clone()).html();
+            $('#modal').html(html);
+
+          },
+          error: function() {
+            $('#notification-bar').text('An error occurred');
+          }
+        });
+      })
     }
   };
 })(jQuery);

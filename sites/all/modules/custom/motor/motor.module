@@ -4,10 +4,22 @@
  * 
  */
 
+
 /**
  * User track
  */
 function motor_page_alter() {
+  drupal_add_js(drupal_get_path('module', 'motor') . '/js/motor.js');
+
+  drupal_add_js(drupal_get_path('module', 'motor') . '/modal/js/modalEffects.js');
+  drupal_add_js(drupal_get_path('module', 'motor') . '/modal/js/classie.js');
+  drupal_add_js(drupal_get_path('module', 'motor') . '/modal/js/cssParser.js');
+  drupal_add_js(drupal_get_path('module', 'motor') . '/modal/js/modernizr.custom.js');
+
+  drupal_add_css(drupal_get_path('module', 'motor') . '/modal/css/component.css');
+  drupal_add_css(drupal_get_path('module', 'motor') . '/modal/css/default.css');
+
+
   global $user;
   if ($user->uid ==0 || $user->uid == 1) {
     return;
@@ -395,7 +407,7 @@ function motor_backlog_save_user_remove_request_submit($form, &$form_state) {
 }
 
 
-function _motor_create_node($fields, $type = 'backlog', $title = 'default_title', $save = TRUE) {
+function _motor_create_node($fields, $type = 'backlog', $title = 'backlog', $save = TRUE) {
   global $user;
 
   $values = array(
@@ -407,25 +419,21 @@ function _motor_create_node($fields, $type = 'backlog', $title = 'default_title'
   );
   $entity = entity_create('node', $values);
 
-  $ewrapper = entity_metadata_wrapper('node', $entity);
-  $ewrapper->language->set('en');
+  $entity_wrapper = entity_metadata_wrapper('node', $entity);
+  $entity_wrapper->language->set('en');
 
-  $ewrapper->revision->set(1);
+  $entity_wrapper->revision->set(1);
 
   foreach ($fields as $key => $value) {
-    $ewrapper->$key->set($value);
+    $entity_wrapper->$key->set($value);
   }
 
-  // Now just save the wrapper and the entity
-  // There is some suggestion that the 'true' argument is necessary to
-  // the entity save method to circumvent a bug in Entity API. If there is
-  // such a bug, it almost certainly will get fixed, so make sure to check.
   if ($save) {
-    $ewrapper->save();
+    $entity_wrapper->save();
     return $entity;
   }
   else {
-    return $ewrapper;
+    return $entity_wrapper;
   }
 }
 
