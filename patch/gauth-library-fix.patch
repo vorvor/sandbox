@@ -1,0 +1,68 @@
+diff -urN gauth/gauth.install gauth.fix/gauth.install
+--- gauth/gauth.install	2016-07-31 15:22:04.000000000 +0100
++++ gauth.fix/gauth.install	2016-08-02 11:44:45.000000000 +0100
+@@ -113,7 +113,7 @@
+     if (!$info['installed']) {
+       $url = l($t('here'), $info['download url']);
+       $documentation = l($t('gooogle api php client installation'), 'https://github.com/google/google-api-php-client#installation');
+-      dsm($info);
++      drupal_set_message($info);
+       $version = isset($info['versions']) && !empty($info['versions']) ? array_keys($info['versions']) : array('2.0.0');
+       $requirements['gauth']['description'] = $t('Install version "@version" or latest version of the Google api php client library code (from !here) in a libraries directory such as "sites/all/libraries/google-api-php-client". You can also use composer to install, read more at !documentation.  The path should be "sites/all/libraries/google-api-php-client"', array('@version' => $version[0], '!here' => $url, '!documentation' => $documentation));
+       $requirements['gauth']['severity'] = REQUIREMENT_ERROR;
+diff -urN gauth/gauth.module gauth.fix/gauth.module
+--- gauth/gauth.module	2016-07-31 15:22:04.000000000 +0100
++++ gauth.fix/gauth.module	2016-08-09 10:23:14.000000000 +0100
+@@ -95,33 +95,36 @@
+   );
+ }
+ 
++function gauth_google_api_php_client_pre_detect(&$library)
++{
++  if (file_exists($library['library path'] . '/vendor')) {
++    // Release install
++    $library['version arguments']['file'] = 'src/Google/Client.php';
++    $library['files']['php'] = array('vendor/autoload.php' => array());
++  } else {
++    // Composer install
++    $library['version arguments']['file'] = 'google/apiclient/src/Google/Client.php';
++    $library['files']['php'] = array('autoload.php' => array());
++  }
++}
++
+ /**
+  * Implements hook_libraries_info().
+  */
+ function gauth_libraries_info() {
+-  $config_dir = conf_path();
+-  $lib_path = 'sites/all/libraries/google-api-php-client';
+-  if (file_exists(DRUPAL_ROOT . '/' . $config_dir . '/libraries')) {
+-    $lib_path = $config_dir . '/libraries/google-api-php-client';
+-  }
+-  $file_path = 'src/Google/Client.php';
+-  $include_path = 'vendor/autoload.php';
+-  if (!file_exists(DRUPAL_ROOT . '/' . $lib_path . '/vendor')) { // Composer install;
+-    $file_path = 'google/apiclient/src/Google/Client.php';
+-    $include_path = 'autoload.php';
+-  }
+   $libraries['google-api-php-client'] = array(
+     'name' => 'Google OAuth2 Library',
+     'vendor url' => 'http://code.google.com/p/google-api-php-client',
+     'download url' => 'https://github.com/google/google-api-php-client/releases',
+     'version arguments' => array(
+-      'file' => $file_path,
++      // file filled in by pre-detect
+       'pattern' => '/LIBVER = "([0-9\.a-z\-]+)/',
+-      'lines' => 40,
++      'lines' => 50,
+     ),
+-    'files' => array(
+-      'php' => array(
+-        $include_path,
++    // files/php filled in by pre-detect
++    'callbacks' => array(
++      'pre-detect' => array(
++        'gauth_google_api_php_client_pre_detect',
+       ),
+     ),
+   );
