@@ -448,10 +448,10 @@ function _motor_create_node($fields, $type = 'backlog', $title = 'backlog', $sav
 function _motor_add_test_event() {
   $params = array(
     'Summary' => 'My Event',  //Title of the event
-    'Start' => '2012-12-24 12:30:00',
-    'End' => '2012-12-24 14:30:00',
+    'Start' => '2016-10-11 12:30:00',
+    'End' => '2016-10-13 14:30:00',
     'Timezone' => 'Asia/Calcutta'
   );
 
-  gcal_event_create($params, 'vorosborisz@gmail.com', 'Borisz');
+  gcal_event_create($params, 'vorosborisz@gmail.com', 'Gauth Login 1');
 }
