@@ -19,16 +19,7 @@ function motor_page_alter() {
   drupal_add_css(drupal_get_path('module', 'motor') . '/modal/css/component.css');
   drupal_add_css(drupal_get_path('module', 'motor') . '/modal/css/default.css');
 
-  $params = array(
-    'Summary' => 'My Event',  //Title of the event
-    'Start' => '2012-12-24 12:30:00',
-    'End' => '2012-12-24 14:30:00',
-    'Timezone' => 'Asia/Calcutta'
-  );
-  global $user;
-  $account_id = sprintf('Gauth Login %d', $user->uid);
-  $account = gauth_account_load($account_id);
-  gcal_event_create($params, 'vorosborisz@gmail.com', $account);
+
 
   global $user;
   if ($user->uid ==0 || $user->uid == 1) {
@@ -77,6 +68,13 @@ function motor_menu() {
     'title' => 'Flag confirm',
     'page callback' => 'motor_decide_save',
     'page arguments' => array(2, 3),
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['add_test_event'] = array(
+    'title' => 'Test event',
+    'page callback' => '_motor_add_test_event',
     'access arguments' => array('access content'),
     'type' => MENU_NORMAL_ITEM,
   );
@@ -447,4 +445,13 @@ function _motor_create_node($fields, $type = 'backlog', $title = 'backlog', $sav
   }
 }
 
+function _motor_add_test_event() {
+  $params = array(
+    'Summary' => 'My Event',  //Title of the event
+    'Start' => '2012-12-24 12:30:00',
+    'End' => '2012-12-24 14:30:00',
+    'Timezone' => 'Asia/Calcutta'
+  );
 
+  gcal_event_create($params, 'vorosborisz@gmail.com', 'Borisz');
+}
