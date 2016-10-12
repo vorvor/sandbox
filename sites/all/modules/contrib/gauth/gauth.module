@@ -821,8 +821,10 @@ function gauth_client_get($account_id = NULL, $by_name = TRUE) {
   }
   if ($client->isAccessTokenExpired()) {
     if ($client->getRefreshToken() != '') { // Access Type is Offline
-      $client->refreshToken($client->getRefreshToken());
+      $refreshToken = $client->getRefreshToken();
+      $client->refreshToken($refreshToken);
       $token = $client->getAccessToken();
+      $token['refresh_token'] = $refreshToken;
       $account['access_token'] = json_encode($token);
       drupal_write_record('gauth_accounts', $account, 'id');
     }
