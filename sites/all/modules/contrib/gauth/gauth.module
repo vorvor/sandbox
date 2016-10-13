@@ -184,6 +184,10 @@ function gauth_response_handler($account_id = NULL) {
     if (isset($_GET['code'])) {
       $client->authenticate($_GET['code']);
       $account['access_token'] = json_encode($client->getAccessToken());
+      $refreshToken = $client->getRefreshToken();
+      if (!empty($refreshToken)) {
+        variable_set('refresh_token', $refreshToken);
+      }
       gauth_account_save($account);
       unset($_SESSION['gauth_account_id']);
       if (!user_access('administer site configuration') && module_exists('gauth_user')) {
@@ -821,7 +825,8 @@ function gauth_client_get($account_id = NULL, $by_name = TRUE) {
   }
   if ($client->isAccessTokenExpired()) {
     if ($client->getRefreshToken() != '') { // Access Type is Offline
-      $refreshToken = $client->getRefreshToken();
+      //$refreshToken = $client->getRefreshToken();
+      $refreshToken = variable_get('refresh_token');
       $client->refreshToken($refreshToken);
       $token = $client->getAccessToken();
       $token['refresh_token'] = $refreshToken;
