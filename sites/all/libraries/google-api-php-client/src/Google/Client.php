@@ -432,6 +432,7 @@ class Google_Client
 
   public function getRefreshToken()
   {
+    return variable_get('refresh_token');
     if (isset($this->token['refresh_token'])) {
       return $this->token['refresh_token'];
     }
